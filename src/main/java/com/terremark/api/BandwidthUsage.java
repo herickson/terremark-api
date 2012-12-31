@@ -1,35 +1,20 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for BandwidthUsage complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for BandwidthUsage complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="BandwidthUsage">
  *   &lt;complexContent>
@@ -43,11 +28,19 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "BandwidthUsage", propOrder = {"totalUsage", "ipStatistics", "historicalUsages"})
+@XmlType(name = "BandwidthUsage", propOrder = {
+    "totalUsage",
+    "ipStatistics",
+    "historicalUsages"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "BandwidthUsage")
-public final class BandwidthUsage extends Resource {
+public class BandwidthUsage
+    extends Resource
+{
 
     @XmlElement(name = "TotalUsage", nillable = true)
     protected BandwidthTotalUsage totalUsage;
@@ -60,8 +53,11 @@ public final class BandwidthUsage extends Resource {
 
     /**
      * Gets the value of the totalUsage property.
-     *
-     * @return possible object is {@link BandwidthTotalUsage }
+     * 
+     * @return
+     *     possible object is
+     *     {@link BandwidthTotalUsage }
+     *     
      */
     public BandwidthTotalUsage getTotalUsage() {
         return totalUsage;
@@ -69,10 +65,13 @@ public final class BandwidthUsage extends Resource {
 
     /**
      * Sets the value of the totalUsage property.
-     *
-     * @param value allowed object is {@link BandwidthTotalUsage }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BandwidthTotalUsage }
+     *     
      */
-    public void setTotalUsage(final BandwidthTotalUsage value) {
+    public void setTotalUsage(BandwidthTotalUsage value) {
         this.totalUsage = value;
     }
 
@@ -89,4 +88,5 @@ public final class BandwidthUsage extends Resource {
         }
         return historicalUsages;
     }
+
 }

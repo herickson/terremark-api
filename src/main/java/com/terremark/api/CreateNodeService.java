@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -22,12 +8,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for CreateNodeService complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for CreateNodeService complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="CreateNodeService">
  *   &lt;complexContent>
@@ -43,11 +29,20 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CreateNodeService", propOrder = {"ipAddress", "port", "enabled", "description"})
+@XmlType(name = "CreateNodeService", propOrder = {
+    "ipAddress",
+    "port",
+    "enabled",
+    "description"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "CreateNodeService")
-public final class CreateNodeService extends ToStringGenerator {
+public class CreateNodeService
+    extends ToStringGenerator
+{
 
     @XmlElement(name = "IpAddress", required = true, nillable = true)
     protected Reference ipAddress;
@@ -63,8 +58,11 @@ public final class CreateNodeService extends ToStringGenerator {
 
     /**
      * Gets the value of the ipAddress property.
-     *
-     * @return possible object is {@link Reference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Reference }
+     *     
      */
     public Reference getIpAddress() {
         return ipAddress;
@@ -72,15 +70,19 @@ public final class CreateNodeService extends ToStringGenerator {
 
     /**
      * Sets the value of the ipAddress property.
-     *
-     * @param value allowed object is {@link Reference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Reference }
+     *     
      */
-    public void setIpAddress(final Reference value) {
+    public void setIpAddress(Reference value) {
         this.ipAddress = value;
     }
 
     /**
      * Gets the value of the port property.
+     * 
      */
     public long getPort() {
         return port;
@@ -88,13 +90,15 @@ public final class CreateNodeService extends ToStringGenerator {
 
     /**
      * Sets the value of the port property.
+     * 
      */
-    public void setPort(final long value) {
+    public void setPort(long value) {
         this.port = value;
     }
 
     /**
      * Gets the value of the enabled property.
+     * 
      */
     public boolean isEnabled() {
         return enabled;
@@ -102,15 +106,19 @@ public final class CreateNodeService extends ToStringGenerator {
 
     /**
      * Sets the value of the enabled property.
+     * 
      */
-    public void setEnabled(final boolean value) {
+    public void setEnabled(boolean value) {
         this.enabled = value;
     }
 
     /**
      * Gets the value of the description property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getDescription() {
         return description;
@@ -118,17 +126,23 @@ public final class CreateNodeService extends ToStringGenerator {
 
     /**
      * Sets the value of the description property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(final String value) {
+    public void setDescription(String value) {
         this.description = value;
     }
 
     /**
      * Gets the value of the name property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getName() {
         return name;
@@ -136,10 +150,14 @@ public final class CreateNodeService extends ToStringGenerator {
 
     /**
      * Sets the value of the name property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(final String value) {
+    public void setName(String value) {
         this.name = value;
     }
+
 }

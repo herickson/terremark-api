@@ -1,23 +1,8 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -26,12 +11,12 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for Resource complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for Resource complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="Resource">
  *   &lt;complexContent>
@@ -47,29 +32,102 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Resource", propOrder = {"links", "actions"})
-@XmlSeeAlso({AlertRules.class, CatalogEntryConfiguration.class, TrustedNetworkGroups.class, Ticket.class,
-                RnatHostAssociation.class, Catalog.class, NetworkHost.class, OrganizationLocation.class, Task.class,
-                NetworkHostSummaryHost.class, DeviceNetwork.class, AttachDiskRetryOperation.class, ApiKey.class,
-                ComputePoolResourceSummaryList.class, PerformanceStatistics.class, IpAddress.class,
-                ComputePoolMemoryUsage.class, TicketGroups.class, DeviceLayout.class, Alert.class, Role.class,
-                PasswordComplexityRules.class, HardwareConfiguration.class, RnatConfiguration.class, UserRole.class,
-                AlertRuleTemplates.class, OperatingSystem.class, ComputePoolResourceSummary.class, Questions.class,
-                BusinessOperations.class, LoginBanner.class, PhysicalDevices.class, ComputePoolCpuUsage.class,
-                Template.class, Rnat.class, LayoutGroup.class, ComputePoolMemoryUsageDetail.class, DetachedDisk.class,
-                Users.class, AlertNotification.class, BandwidthUsage.class, DetachDiskRetryOperation.class,
-                SshKeys.class, GuestProcesses.class, DetachedDisks.class, OperatingSystemFamilies.class,
-                EnvironmentNetworkSummary.class, AuthenticationLevels.class, AssignedIpAddresses.class, Contacts.class,
-                Tickets.class, VirtualMachineConfigurationOptions.class, AlertRule.class, BackupInternetServices.class,
-                ComputePoolCpuUsageDetail.class, DeviceTagList.class, AdminOrganizations.class,
-                ComputePoolStorageUsageDetail.class, InternetServiceMonitor.class, UserCredentials.class,
-                AlertRuleTemplate.class, CatalogLog.class, ApiKeys.class, Network.class,
-                ComputePoolPerformanceStatistics.class, Organizations.class, Environments.class, SupportAccess.class,
-                BusinessOperation.class, Entity.class, Location.class, Templates.class, NetworkRnat.class,
-                FirewallAcls.class, LayoutRow.class})
-public class Resource extends ToStringGenerator {
+@XmlType(name = "Resource", propOrder = {
+    "links",
+    "actions"
+})
+@XmlSeeAlso({
+    AlertRules.class,
+    TrustedNetworkGroups.class,
+    NetworkHost.class,
+    OrganizationLocation.class,
+    NetworkHostSummaryHost.class,
+    DeviceNetwork.class,
+    AttachDiskRetryOperation.class,
+    ApiKey.class,
+    ComputePoolResourceSummaryList.class,
+    ComputePoolMemoryUsage.class,
+    TicketGroups.class,
+    DeviceLayout.class,
+    Role.class,
+    HardwareConfiguration.class,
+    AlertRuleTemplates.class,
+    OperatingSystem.class,
+    ComputePoolResourceSummary.class,
+    PhysicalDevices.class,
+    ComputePoolCpuUsage.class,
+    Template.class,
+    ComputePoolMemoryUsageDetail.class,
+    DetachedDisk.class,
+    Users.class,
+    SshKeys.class,
+    OperatingSystemFamilies.class,
+    VirtualMachineConfigurationOptions.class,
+    BillingSummary.class,
+    AdminOrganizations.class,
+    UserCredentials.class,
+    EnvironmentSecurityGroups.class,
+    AlertRuleTemplate.class,
+    ApiKeys.class,
+    Network.class,
+    BillingPeriods.class,
+    AssignedSecurityGroups.class,
+    Location.class,
+    NetworkRnat.class,
+    CatalogEntryConfiguration.class,
+    Ticket.class,
+    RnatHostAssociation.class,
+    Catalog.class,
+    Task.class,
+    PerformanceStatistics.class,
+    IpAddress.class,
+    Alert.class,
+    PasswordComplexityRules.class,
+    RnatConfiguration.class,
+    UserRole.class,
+    PriceMatrix.class,
+    Questions.class,
+    BusinessOperations.class,
+    LoginBanner.class,
+    Rnat.class,
+    LayoutGroup.class,
+    AlertNotification.class,
+    BandwidthUsage.class,
+    DetachDiskRetryOperation.class,
+    ComputeUnitCosts.class,
+    GuestProcesses.class,
+    DetachedDisks.class,
+    EnvironmentNetworkSummary.class,
+    AuthenticationLevels.class,
+    AssignedIpAddresses.class,
+    Contacts.class,
+    Tickets.class,
+    AlertRule.class,
+    BackupInternetServices.class,
+    ComputePoolCpuUsageDetail.class,
+    DeviceTagList.class,
+    DeviceBillingSummary.class,
+    ComputePoolStorageUsageDetail.class,
+    InternetServiceMonitor.class,
+    CatalogLog.class,
+    ComputePoolPerformanceStatistics.class,
+    Organizations.class,
+    Environments.class,
+    SupportAccess.class,
+    VirtualMachineRetryOperation.class,
+    BusinessOperation.class,
+    Entity.class,
+    Templates.class,
+    FirewallAcls.class,
+    LayoutRow.class
+})
+public class Resource
+    extends ToStringGenerator
+{
 
     @XmlAttribute(name = "name")
     protected String name;
@@ -86,8 +144,11 @@ public class Resource extends ToStringGenerator {
 
     /**
      * Gets the value of the name property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getName() {
         return name;
@@ -95,17 +156,23 @@ public class Resource extends ToStringGenerator {
 
     /**
      * Sets the value of the name property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(final String value) {
+    public void setName(String value) {
         this.name = value;
     }
 
     /**
      * Gets the value of the href property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getHref() {
         return href;
@@ -113,17 +180,23 @@ public class Resource extends ToStringGenerator {
 
     /**
      * Sets the value of the href property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setHref(final String value) {
+    public void setHref(String value) {
         this.href = value;
     }
 
     /**
      * Gets the value of the type property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getType() {
         return type;
@@ -131,10 +204,13 @@ public class Resource extends ToStringGenerator {
 
     /**
      * Sets the value of the type property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setType(final String value) {
+    public void setType(String value) {
         this.type = value;
     }
 
@@ -151,4 +227,5 @@ public class Resource extends ToStringGenerator {
         }
         return actions;
     }
+
 }

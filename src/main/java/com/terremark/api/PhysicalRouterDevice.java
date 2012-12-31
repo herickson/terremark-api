@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -20,12 +6,12 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for PhysicalRouterDevice complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for PhysicalRouterDevice complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="PhysicalRouterDevice">
  *   &lt;complexContent>
@@ -40,10 +26,19 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PhysicalRouterDevice", propOrder = {"model", "serialNumber", "outsideIp", "insideIp"})
-public class PhysicalRouterDevice extends ToStringGenerator {
+@XmlType(name = "PhysicalRouterDevice", propOrder = {
+    "model",
+    "serialNumber",
+    "outsideIp",
+    "insideIp"
+})
+public class PhysicalRouterDevice
+    extends ToStringGenerator
+{
 
     @XmlElement(name = "Model", nillable = true)
     protected String model;
@@ -56,8 +51,11 @@ public class PhysicalRouterDevice extends ToStringGenerator {
 
     /**
      * Gets the value of the model property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getModel() {
         return model;
@@ -65,17 +63,23 @@ public class PhysicalRouterDevice extends ToStringGenerator {
 
     /**
      * Sets the value of the model property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setModel(final String value) {
+    public void setModel(String value) {
         this.model = value;
     }
 
     /**
      * Gets the value of the serialNumber property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getSerialNumber() {
         return serialNumber;
@@ -83,17 +87,23 @@ public class PhysicalRouterDevice extends ToStringGenerator {
 
     /**
      * Sets the value of the serialNumber property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSerialNumber(final String value) {
+    public void setSerialNumber(String value) {
         this.serialNumber = value;
     }
 
     /**
      * Gets the value of the outsideIp property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getOutsideIp() {
         return outsideIp;
@@ -101,17 +111,23 @@ public class PhysicalRouterDevice extends ToStringGenerator {
 
     /**
      * Sets the value of the outsideIp property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setOutsideIp(final String value) {
+    public void setOutsideIp(String value) {
         this.outsideIp = value;
     }
 
     /**
      * Gets the value of the insideIp property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getInsideIp() {
         return insideIp;
@@ -119,10 +135,14 @@ public class PhysicalRouterDevice extends ToStringGenerator {
 
     /**
      * Sets the value of the insideIp property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setInsideIp(final String value) {
+    public void setInsideIp(String value) {
         this.insideIp = value;
     }
+
 }

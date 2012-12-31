@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -20,12 +6,12 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for CreateFirewallAcl complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for CreateFirewallAcl complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="CreateFirewallAcl">
  *   &lt;complexContent>
@@ -36,16 +22,28 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="Source" type="{}FirewallAclEndpoint"/>
  *         &lt;element name="Destination" type="{}FirewallAclEndpoint" minOccurs="0"/>
  *         &lt;element name="PortRange" type="{}PortRange" minOccurs="0"/>
+ *         &lt;element name="LineNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CreateFirewallAcl", propOrder = {"permission", "protocol", "source", "destination", "portRange"})
+@XmlType(name = "CreateFirewallAcl", propOrder = {
+    "permission",
+    "protocol",
+    "source",
+    "destination",
+    "portRange",
+    "lineNumber"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "CreateFirewallAcl")
-public final class CreateFirewallAcl extends ToStringGenerator {
+public class CreateFirewallAcl
+    extends ToStringGenerator
+{
 
     @XmlElement(name = "Permission", required = true)
     protected AclPermissionTypeEnum permission;
@@ -57,11 +55,16 @@ public final class CreateFirewallAcl extends ToStringGenerator {
     protected FirewallAclEndpoint destination;
     @XmlElement(name = "PortRange", nillable = true)
     protected PortRange portRange;
+    @XmlElement(name = "LineNumber", nillable = true)
+    protected String lineNumber;
 
     /**
      * Gets the value of the permission property.
-     *
-     * @return possible object is {@link AclPermissionTypeEnum }
+     * 
+     * @return
+     *     possible object is
+     *     {@link AclPermissionTypeEnum }
+     *     
      */
     public AclPermissionTypeEnum getPermission() {
         return permission;
@@ -69,17 +72,23 @@ public final class CreateFirewallAcl extends ToStringGenerator {
 
     /**
      * Sets the value of the permission property.
-     *
-     * @param value allowed object is {@link AclPermissionTypeEnum }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AclPermissionTypeEnum }
+     *     
      */
-    public void setPermission(final AclPermissionTypeEnum value) {
+    public void setPermission(AclPermissionTypeEnum value) {
         this.permission = value;
     }
 
     /**
      * Gets the value of the protocol property.
-     *
-     * @return possible object is {@link ProtocolTypeEnum }
+     * 
+     * @return
+     *     possible object is
+     *     {@link ProtocolTypeEnum }
+     *     
      */
     public ProtocolTypeEnum getProtocol() {
         return protocol;
@@ -87,17 +96,23 @@ public final class CreateFirewallAcl extends ToStringGenerator {
 
     /**
      * Sets the value of the protocol property.
-     *
-     * @param value allowed object is {@link ProtocolTypeEnum }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ProtocolTypeEnum }
+     *     
      */
-    public void setProtocol(final ProtocolTypeEnum value) {
+    public void setProtocol(ProtocolTypeEnum value) {
         this.protocol = value;
     }
 
     /**
      * Gets the value of the source property.
-     *
-     * @return possible object is {@link FirewallAclEndpoint }
+     * 
+     * @return
+     *     possible object is
+     *     {@link FirewallAclEndpoint }
+     *     
      */
     public FirewallAclEndpoint getSource() {
         return source;
@@ -105,17 +120,23 @@ public final class CreateFirewallAcl extends ToStringGenerator {
 
     /**
      * Sets the value of the source property.
-     *
-     * @param value allowed object is {@link FirewallAclEndpoint }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FirewallAclEndpoint }
+     *     
      */
-    public void setSource(final FirewallAclEndpoint value) {
+    public void setSource(FirewallAclEndpoint value) {
         this.source = value;
     }
 
     /**
      * Gets the value of the destination property.
-     *
-     * @return possible object is {@link FirewallAclEndpoint }
+     * 
+     * @return
+     *     possible object is
+     *     {@link FirewallAclEndpoint }
+     *     
      */
     public FirewallAclEndpoint getDestination() {
         return destination;
@@ -123,17 +144,23 @@ public final class CreateFirewallAcl extends ToStringGenerator {
 
     /**
      * Sets the value of the destination property.
-     *
-     * @param value allowed object is {@link FirewallAclEndpoint }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FirewallAclEndpoint }
+     *     
      */
-    public void setDestination(final FirewallAclEndpoint value) {
+    public void setDestination(FirewallAclEndpoint value) {
         this.destination = value;
     }
 
     /**
      * Gets the value of the portRange property.
-     *
-     * @return possible object is {@link PortRange }
+     * 
+     * @return
+     *     possible object is
+     *     {@link PortRange }
+     *     
      */
     public PortRange getPortRange() {
         return portRange;
@@ -141,10 +168,38 @@ public final class CreateFirewallAcl extends ToStringGenerator {
 
     /**
      * Sets the value of the portRange property.
-     *
-     * @param value allowed object is {@link PortRange }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PortRange }
+     *     
      */
-    public void setPortRange(final PortRange value) {
+    public void setPortRange(PortRange value) {
         this.portRange = value;
     }
+
+    /**
+     * Gets the value of the lineNumber property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getLineNumber() {
+        return lineNumber;
+    }
+
+    /**
+     * Sets the value of the lineNumber property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setLineNumber(String value) {
+        this.lineNumber = value;
+    }
+
 }

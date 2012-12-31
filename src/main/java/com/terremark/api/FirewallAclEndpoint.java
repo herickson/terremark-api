@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -20,12 +6,12 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for FirewallAclEndpoint complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for FirewallAclEndpoint complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="FirewallAclEndpoint">
  *   &lt;complexContent>
@@ -42,11 +28,21 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FirewallAclEndpoint", propOrder = {"type", "externalIpAddress", "externalNetwork", "ipAddress",
-                "network", "trustedNetworkGroup"})
-public class FirewallAclEndpoint extends ToStringGenerator {
+@XmlType(name = "FirewallAclEndpoint", propOrder = {
+    "type",
+    "externalIpAddress",
+    "externalNetwork",
+    "ipAddress",
+    "network",
+    "trustedNetworkGroup"
+})
+public class FirewallAclEndpoint
+    extends ToStringGenerator
+{
 
     @XmlElement(name = "Type")
     protected FirewallAclEndpointTypeEnum type;
@@ -63,8 +59,11 @@ public class FirewallAclEndpoint extends ToStringGenerator {
 
     /**
      * Gets the value of the type property.
-     *
-     * @return possible object is {@link FirewallAclEndpointTypeEnum }
+     * 
+     * @return
+     *     possible object is
+     *     {@link FirewallAclEndpointTypeEnum }
+     *     
      */
     public FirewallAclEndpointTypeEnum getType() {
         return type;
@@ -72,17 +71,23 @@ public class FirewallAclEndpoint extends ToStringGenerator {
 
     /**
      * Sets the value of the type property.
-     *
-     * @param value allowed object is {@link FirewallAclEndpointTypeEnum }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FirewallAclEndpointTypeEnum }
+     *     
      */
-    public void setType(final FirewallAclEndpointTypeEnum value) {
+    public void setType(FirewallAclEndpointTypeEnum value) {
         this.type = value;
     }
 
     /**
      * Gets the value of the externalIpAddress property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getExternalIpAddress() {
         return externalIpAddress;
@@ -90,17 +95,23 @@ public class FirewallAclEndpoint extends ToStringGenerator {
 
     /**
      * Sets the value of the externalIpAddress property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setExternalIpAddress(final String value) {
+    public void setExternalIpAddress(String value) {
         this.externalIpAddress = value;
     }
 
     /**
      * Gets the value of the externalNetwork property.
-     *
-     * @return possible object is {@link ExternalNetwork }
+     * 
+     * @return
+     *     possible object is
+     *     {@link ExternalNetwork }
+     *     
      */
     public ExternalNetwork getExternalNetwork() {
         return externalNetwork;
@@ -108,17 +119,23 @@ public class FirewallAclEndpoint extends ToStringGenerator {
 
     /**
      * Sets the value of the externalNetwork property.
-     *
-     * @param value allowed object is {@link ExternalNetwork }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ExternalNetwork }
+     *     
      */
-    public void setExternalNetwork(final ExternalNetwork value) {
+    public void setExternalNetwork(ExternalNetwork value) {
         this.externalNetwork = value;
     }
 
     /**
      * Gets the value of the ipAddress property.
-     *
-     * @return possible object is {@link IpAddressReference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link IpAddressReference }
+     *     
      */
     public IpAddressReference getIpAddress() {
         return ipAddress;
@@ -126,17 +143,23 @@ public class FirewallAclEndpoint extends ToStringGenerator {
 
     /**
      * Sets the value of the ipAddress property.
-     *
-     * @param value allowed object is {@link IpAddressReference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link IpAddressReference }
+     *     
      */
-    public void setIpAddress(final IpAddressReference value) {
+    public void setIpAddress(IpAddressReference value) {
         this.ipAddress = value;
     }
 
     /**
      * Gets the value of the network property.
-     *
-     * @return possible object is {@link NetworkReference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link NetworkReference }
+     *     
      */
     public NetworkReference getNetwork() {
         return network;
@@ -144,17 +167,23 @@ public class FirewallAclEndpoint extends ToStringGenerator {
 
     /**
      * Sets the value of the network property.
-     *
-     * @param value allowed object is {@link NetworkReference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link NetworkReference }
+     *     
      */
-    public void setNetwork(final NetworkReference value) {
+    public void setNetwork(NetworkReference value) {
         this.network = value;
     }
 
     /**
      * Gets the value of the trustedNetworkGroup property.
-     *
-     * @return possible object is {@link Reference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Reference }
+     *     
      */
     public Reference getTrustedNetworkGroup() {
         return trustedNetworkGroup;
@@ -162,10 +191,14 @@ public class FirewallAclEndpoint extends ToStringGenerator {
 
     /**
      * Sets the value of the trustedNetworkGroup property.
-     *
-     * @param value allowed object is {@link Reference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Reference }
+     *     
      */
-    public void setTrustedNetworkGroup(final Reference value) {
+    public void setTrustedNetworkGroup(Reference value) {
         this.trustedNetworkGroup = value;
     }
+
 }

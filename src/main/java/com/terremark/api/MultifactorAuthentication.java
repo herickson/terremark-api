@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -20,12 +6,12 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for MultifactorAuthentication complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for MultifactorAuthentication complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="MultifactorAuthentication">
  *   &lt;complexContent>
@@ -43,12 +29,23 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "MultifactorAuthentication", propOrder = {"countryCode", "primaryPhone", "primaryExtension",
-                "backupCountryCode", "backupPhone", "backupExtension", "pin"})
+@XmlType(name = "MultifactorAuthentication", propOrder = {
+    "countryCode",
+    "primaryPhone",
+    "primaryExtension",
+    "backupCountryCode",
+    "backupPhone",
+    "backupExtension",
+    "pin"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "MultifactorAuthentication")
-public final class MultifactorAuthentication extends ToStringGenerator {
+public class MultifactorAuthentication
+    extends ToStringGenerator
+{
 
     @XmlElement(name = "CountryCode")
     protected int countryCode;
@@ -67,6 +64,7 @@ public final class MultifactorAuthentication extends ToStringGenerator {
 
     /**
      * Gets the value of the countryCode property.
+     * 
      */
     public int getCountryCode() {
         return countryCode;
@@ -74,15 +72,19 @@ public final class MultifactorAuthentication extends ToStringGenerator {
 
     /**
      * Sets the value of the countryCode property.
+     * 
      */
-    public void setCountryCode(final int value) {
+    public void setCountryCode(int value) {
         this.countryCode = value;
     }
 
     /**
      * Gets the value of the primaryPhone property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getPrimaryPhone() {
         return primaryPhone;
@@ -90,17 +92,23 @@ public final class MultifactorAuthentication extends ToStringGenerator {
 
     /**
      * Sets the value of the primaryPhone property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPrimaryPhone(final String value) {
+    public void setPrimaryPhone(String value) {
         this.primaryPhone = value;
     }
 
     /**
      * Gets the value of the primaryExtension property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getPrimaryExtension() {
         return primaryExtension;
@@ -108,17 +116,23 @@ public final class MultifactorAuthentication extends ToStringGenerator {
 
     /**
      * Sets the value of the primaryExtension property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPrimaryExtension(final String value) {
+    public void setPrimaryExtension(String value) {
         this.primaryExtension = value;
     }
 
     /**
      * Gets the value of the backupCountryCode property.
-     *
-     * @return possible object is {@link Integer }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
     public Integer getBackupCountryCode() {
         return backupCountryCode;
@@ -126,17 +140,23 @@ public final class MultifactorAuthentication extends ToStringGenerator {
 
     /**
      * Sets the value of the backupCountryCode property.
-     *
-     * @param value allowed object is {@link Integer }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setBackupCountryCode(final Integer value) {
+    public void setBackupCountryCode(Integer value) {
         this.backupCountryCode = value;
     }
 
     /**
      * Gets the value of the backupPhone property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getBackupPhone() {
         return backupPhone;
@@ -144,17 +164,23 @@ public final class MultifactorAuthentication extends ToStringGenerator {
 
     /**
      * Sets the value of the backupPhone property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setBackupPhone(final String value) {
+    public void setBackupPhone(String value) {
         this.backupPhone = value;
     }
 
     /**
      * Gets the value of the backupExtension property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getBackupExtension() {
         return backupExtension;
@@ -162,17 +188,23 @@ public final class MultifactorAuthentication extends ToStringGenerator {
 
     /**
      * Sets the value of the backupExtension property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setBackupExtension(final String value) {
+    public void setBackupExtension(String value) {
         this.backupExtension = value;
     }
 
     /**
      * Gets the value of the pin property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getPin() {
         return pin;
@@ -180,10 +212,14 @@ public final class MultifactorAuthentication extends ToStringGenerator {
 
     /**
      * Sets the value of the pin property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPin(final String value) {
+    public void setPin(String value) {
         this.pin = value;
     }
+
 }

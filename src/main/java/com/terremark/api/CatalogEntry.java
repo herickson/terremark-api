@@ -1,35 +1,20 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for CatalogEntry complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for CatalogEntry complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="CatalogEntry">
  *   &lt;complexContent>
@@ -45,11 +30,21 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CatalogEntry", propOrder = {"status", "alerts", "files", "configuration", "catalogType"})
+@XmlType(name = "CatalogEntry", propOrder = {
+    "status",
+    "alerts",
+    "files",
+    "configuration",
+    "catalogType"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "CatalogEntry")
-public final class CatalogEntry extends Entity {
+public class CatalogEntry
+    extends Entity
+{
 
     @XmlElement(name = "Status")
     protected CatalogEntryStatus status;
@@ -66,8 +61,11 @@ public final class CatalogEntry extends Entity {
 
     /**
      * Gets the value of the status property.
-     *
-     * @return possible object is {@link CatalogEntryStatus }
+     * 
+     * @return
+     *     possible object is
+     *     {@link CatalogEntryStatus }
+     *     
      */
     public CatalogEntryStatus getStatus() {
         return status;
@@ -75,17 +73,23 @@ public final class CatalogEntry extends Entity {
 
     /**
      * Sets the value of the status property.
-     *
-     * @param value allowed object is {@link CatalogEntryStatus }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link CatalogEntryStatus }
+     *     
      */
-    public void setStatus(final CatalogEntryStatus value) {
+    public void setStatus(CatalogEntryStatus value) {
         this.status = value;
     }
 
     /**
      * Gets the value of the configuration property.
-     *
-     * @return possible object is {@link Reference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Reference }
+     *     
      */
     public Reference getConfiguration() {
         return configuration;
@@ -93,17 +97,23 @@ public final class CatalogEntry extends Entity {
 
     /**
      * Sets the value of the configuration property.
-     *
-     * @param value allowed object is {@link Reference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Reference }
+     *     
      */
-    public void setConfiguration(final Reference value) {
+    public void setConfiguration(Reference value) {
         this.configuration = value;
     }
 
     /**
      * Gets the value of the catalogType property.
-     *
-     * @return possible object is {@link CatalogEntryTypeEnum }
+     * 
+     * @return
+     *     possible object is
+     *     {@link CatalogEntryTypeEnum }
+     *     
      */
     public CatalogEntryTypeEnum getCatalogType() {
         return catalogType;
@@ -111,10 +121,13 @@ public final class CatalogEntry extends Entity {
 
     /**
      * Sets the value of the catalogType property.
-     *
-     * @param value allowed object is {@link CatalogEntryTypeEnum }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link CatalogEntryTypeEnum }
+     *     
      */
-    public void setCatalogType(final CatalogEntryTypeEnum value) {
+    public void setCatalogType(CatalogEntryTypeEnum value) {
         this.catalogType = value;
     }
 
@@ -131,4 +144,5 @@ public final class CatalogEntry extends Entity {
         }
         return files;
     }
+
 }

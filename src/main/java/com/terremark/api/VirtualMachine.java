@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -20,12 +6,12 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for VirtualMachine complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for VirtualMachine complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="VirtualMachine">
  *   &lt;complexContent>
@@ -45,12 +31,25 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VirtualMachine", propOrder = {"status", "poweredOn", "hardwareConfiguration", "ipAddresses",
-                "operatingSystem", "toolsStatus", "mediaStatus", "customizationPending", "pendingRetryOperation"})
+@XmlType(name = "VirtualMachine", propOrder = {
+    "status",
+    "poweredOn",
+    "hardwareConfiguration",
+    "ipAddresses",
+    "operatingSystem",
+    "toolsStatus",
+    "mediaStatus",
+    "customizationPending",
+    "pendingRetryOperation"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "VirtualMachine")
-public final class VirtualMachine extends Device {
+public class VirtualMachine
+    extends Device
+{
 
     @XmlElement(name = "Status", nillable = true)
     protected VirtualMachineStatus status;
@@ -73,8 +72,11 @@ public final class VirtualMachine extends Device {
 
     /**
      * Gets the value of the status property.
-     *
-     * @return possible object is {@link VirtualMachineStatus }
+     * 
+     * @return
+     *     possible object is
+     *     {@link VirtualMachineStatus }
+     *     
      */
     public VirtualMachineStatus getStatus() {
         return status;
@@ -82,17 +84,23 @@ public final class VirtualMachine extends Device {
 
     /**
      * Sets the value of the status property.
-     *
-     * @param value allowed object is {@link VirtualMachineStatus }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link VirtualMachineStatus }
+     *     
      */
-    public void setStatus(final VirtualMachineStatus value) {
+    public void setStatus(VirtualMachineStatus value) {
         this.status = value;
     }
 
     /**
      * Gets the value of the poweredOn property.
-     *
-     * @return possible object is {@link Boolean }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
     public Boolean isPoweredOn() {
         return poweredOn;
@@ -100,17 +108,23 @@ public final class VirtualMachine extends Device {
 
     /**
      * Sets the value of the poweredOn property.
-     *
-     * @param value allowed object is {@link Boolean }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setPoweredOn(final Boolean value) {
+    public void setPoweredOn(Boolean value) {
         this.poweredOn = value;
     }
 
     /**
      * Gets the value of the hardwareConfiguration property.
-     *
-     * @return possible object is {@link HardwareConfiguration }
+     * 
+     * @return
+     *     possible object is
+     *     {@link HardwareConfiguration }
+     *     
      */
     public HardwareConfiguration getHardwareConfiguration() {
         return hardwareConfiguration;
@@ -118,17 +132,23 @@ public final class VirtualMachine extends Device {
 
     /**
      * Sets the value of the hardwareConfiguration property.
-     *
-     * @param value allowed object is {@link HardwareConfiguration }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link HardwareConfiguration }
+     *     
      */
-    public void setHardwareConfiguration(final HardwareConfiguration value) {
+    public void setHardwareConfiguration(HardwareConfiguration value) {
         this.hardwareConfiguration = value;
     }
 
     /**
      * Gets the value of the ipAddresses property.
-     *
-     * @return possible object is {@link VirtualMachineIpAddresses }
+     * 
+     * @return
+     *     possible object is
+     *     {@link VirtualMachineIpAddresses }
+     *     
      */
     public VirtualMachineIpAddresses getIpAddresses() {
         return ipAddresses;
@@ -136,17 +156,23 @@ public final class VirtualMachine extends Device {
 
     /**
      * Sets the value of the ipAddresses property.
-     *
-     * @param value allowed object is {@link VirtualMachineIpAddresses }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link VirtualMachineIpAddresses }
+     *     
      */
-    public void setIpAddresses(final VirtualMachineIpAddresses value) {
+    public void setIpAddresses(VirtualMachineIpAddresses value) {
         this.ipAddresses = value;
     }
 
     /**
      * Gets the value of the operatingSystem property.
-     *
-     * @return possible object is {@link Reference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Reference }
+     *     
      */
     public Reference getOperatingSystem() {
         return operatingSystem;
@@ -154,17 +180,23 @@ public final class VirtualMachine extends Device {
 
     /**
      * Sets the value of the operatingSystem property.
-     *
-     * @param value allowed object is {@link Reference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Reference }
+     *     
      */
-    public void setOperatingSystem(final Reference value) {
+    public void setOperatingSystem(Reference value) {
         this.operatingSystem = value;
     }
 
     /**
      * Gets the value of the toolsStatus property.
-     *
-     * @return possible object is {@link ToolsStatus }
+     * 
+     * @return
+     *     possible object is
+     *     {@link ToolsStatus }
+     *     
      */
     public ToolsStatus getToolsStatus() {
         return toolsStatus;
@@ -172,17 +204,23 @@ public final class VirtualMachine extends Device {
 
     /**
      * Sets the value of the toolsStatus property.
-     *
-     * @param value allowed object is {@link ToolsStatus }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ToolsStatus }
+     *     
      */
-    public void setToolsStatus(final ToolsStatus value) {
+    public void setToolsStatus(ToolsStatus value) {
         this.toolsStatus = value;
     }
 
     /**
      * Gets the value of the mediaStatus property.
-     *
-     * @return possible object is {@link VirtualMachineMediaStatus }
+     * 
+     * @return
+     *     possible object is
+     *     {@link VirtualMachineMediaStatus }
+     *     
      */
     public VirtualMachineMediaStatus getMediaStatus() {
         return mediaStatus;
@@ -190,17 +228,23 @@ public final class VirtualMachine extends Device {
 
     /**
      * Sets the value of the mediaStatus property.
-     *
-     * @param value allowed object is {@link VirtualMachineMediaStatus }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link VirtualMachineMediaStatus }
+     *     
      */
-    public void setMediaStatus(final VirtualMachineMediaStatus value) {
+    public void setMediaStatus(VirtualMachineMediaStatus value) {
         this.mediaStatus = value;
     }
 
     /**
      * Gets the value of the customizationPending property.
-     *
-     * @return possible object is {@link Boolean }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
     public Boolean isCustomizationPending() {
         return customizationPending;
@@ -208,17 +252,23 @@ public final class VirtualMachine extends Device {
 
     /**
      * Sets the value of the customizationPending property.
-     *
-     * @param value allowed object is {@link Boolean }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setCustomizationPending(final Boolean value) {
+    public void setCustomizationPending(Boolean value) {
         this.customizationPending = value;
     }
 
     /**
      * Gets the value of the pendingRetryOperation property.
-     *
-     * @return possible object is {@link Reference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Reference }
+     *     
      */
     public Reference getPendingRetryOperation() {
         return pendingRetryOperation;
@@ -226,10 +276,14 @@ public final class VirtualMachine extends Device {
 
     /**
      * Sets the value of the pendingRetryOperation property.
-     *
-     * @param value allowed object is {@link Reference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Reference }
+     *     
      */
-    public void setPendingRetryOperation(final Reference value) {
+    public void setPendingRetryOperation(Reference value) {
         this.pendingRetryOperation = value;
     }
+
 }

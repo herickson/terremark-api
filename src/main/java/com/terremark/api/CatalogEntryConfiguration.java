@@ -1,36 +1,21 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for CatalogEntryConfiguration complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for CatalogEntryConfiguration complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="CatalogEntryConfiguration">
  *   &lt;complexContent>
@@ -50,12 +35,25 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CatalogEntryConfiguration", propOrder = {"processorCount", "memory", "operatingSystem", "disks",
-                "networkAdapters", "networkMappings", "licensedBy", "licenseType", "licenseCost"})
+@XmlType(name = "CatalogEntryConfiguration", propOrder = {
+    "processorCount",
+    "memory",
+    "operatingSystem",
+    "disks",
+    "networkAdapters",
+    "networkMappings",
+    "licensedBy",
+    "licenseType",
+    "licenseCost"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "CatalogEntryConfiguration")
-public final class CatalogEntryConfiguration extends Resource {
+public class CatalogEntryConfiguration
+    extends Resource
+{
 
     @XmlElement(name = "ProcessorCount")
     protected Integer processorCount;
@@ -80,8 +78,11 @@ public final class CatalogEntryConfiguration extends Resource {
 
     /**
      * Gets the value of the processorCount property.
-     *
-     * @return possible object is {@link Integer }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
     public Integer getProcessorCount() {
         return processorCount;
@@ -89,17 +90,23 @@ public final class CatalogEntryConfiguration extends Resource {
 
     /**
      * Sets the value of the processorCount property.
-     *
-     * @param value allowed object is {@link Integer }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setProcessorCount(final Integer value) {
+    public void setProcessorCount(Integer value) {
         this.processorCount = value;
     }
 
     /**
      * Gets the value of the memory property.
-     *
-     * @return possible object is {@link ResourceCapacity }
+     * 
+     * @return
+     *     possible object is
+     *     {@link ResourceCapacity }
+     *     
      */
     public ResourceCapacity getMemory() {
         return memory;
@@ -107,17 +114,23 @@ public final class CatalogEntryConfiguration extends Resource {
 
     /**
      * Sets the value of the memory property.
-     *
-     * @param value allowed object is {@link ResourceCapacity }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ResourceCapacity }
+     *     
      */
-    public void setMemory(final ResourceCapacity value) {
+    public void setMemory(ResourceCapacity value) {
         this.memory = value;
     }
 
     /**
      * Gets the value of the operatingSystem property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getOperatingSystem() {
         return operatingSystem;
@@ -125,17 +138,23 @@ public final class CatalogEntryConfiguration extends Resource {
 
     /**
      * Sets the value of the operatingSystem property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setOperatingSystem(final String value) {
+    public void setOperatingSystem(String value) {
         this.operatingSystem = value;
     }
 
     /**
      * Gets the value of the networkAdapters property.
-     *
-     * @return possible object is {@link Integer }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
     public Integer getNetworkAdapters() {
         return networkAdapters;
@@ -143,17 +162,23 @@ public final class CatalogEntryConfiguration extends Resource {
 
     /**
      * Sets the value of the networkAdapters property.
-     *
-     * @param value allowed object is {@link Integer }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setNetworkAdapters(final Integer value) {
+    public void setNetworkAdapters(Integer value) {
         this.networkAdapters = value;
     }
 
     /**
      * Gets the value of the licensedBy property.
-     *
-     * @return possible object is {@link CatalogItemLicensedBy }
+     * 
+     * @return
+     *     possible object is
+     *     {@link CatalogItemLicensedBy }
+     *     
      */
     public CatalogItemLicensedBy getLicensedBy() {
         return licensedBy;
@@ -161,17 +186,23 @@ public final class CatalogEntryConfiguration extends Resource {
 
     /**
      * Sets the value of the licensedBy property.
-     *
-     * @param value allowed object is {@link CatalogItemLicensedBy }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link CatalogItemLicensedBy }
+     *     
      */
-    public void setLicensedBy(final CatalogItemLicensedBy value) {
+    public void setLicensedBy(CatalogItemLicensedBy value) {
         this.licensedBy = value;
     }
 
     /**
      * Gets the value of the licenseType property.
-     *
-     * @return possible object is {@link CatalogItemLicenseTypeEnum }
+     * 
+     * @return
+     *     possible object is
+     *     {@link CatalogItemLicenseTypeEnum }
+     *     
      */
     public CatalogItemLicenseTypeEnum getLicenseType() {
         return licenseType;
@@ -179,17 +210,23 @@ public final class CatalogEntryConfiguration extends Resource {
 
     /**
      * Sets the value of the licenseType property.
-     *
-     * @param value allowed object is {@link CatalogItemLicenseTypeEnum }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link CatalogItemLicenseTypeEnum }
+     *     
      */
-    public void setLicenseType(final CatalogItemLicenseTypeEnum value) {
+    public void setLicenseType(CatalogItemLicenseTypeEnum value) {
         this.licenseType = value;
     }
 
     /**
      * Gets the value of the licenseCost property.
-     *
-     * @return possible object is {@link BigDecimal }
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigDecimal }
+     *     
      */
     public BigDecimal getLicenseCost() {
         return licenseCost;
@@ -197,10 +234,13 @@ public final class CatalogEntryConfiguration extends Resource {
 
     /**
      * Sets the value of the licenseCost property.
-     *
-     * @param value allowed object is {@link BigDecimal }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigDecimal }
+     *     
      */
-    public void setLicenseCost(final BigDecimal value) {
+    public void setLicenseCost(BigDecimal value) {
         this.licenseCost = value;
     }
 
@@ -217,4 +257,5 @@ public final class CatalogEntryConfiguration extends Resource {
         }
         return networkMappings;
     }
+
 }

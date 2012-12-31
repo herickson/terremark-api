@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -22,12 +8,12 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+
 /**
- * <p>
- * Java class for PasswordExpiration complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for PasswordExpiration complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="PasswordExpiration">
  *   &lt;complexContent>
@@ -42,10 +28,19 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PasswordExpiration", propOrder = {"passwordExpirationEnforced", "expirationInDays", "expirationNoticeInDays", "doNotExpireBeforeDate"})
-public final class PasswordExpiration extends ToStringGenerator {
+@XmlType(name = "PasswordExpiration", propOrder = {
+    "passwordExpirationEnforced",
+    "expirationInDays",
+    "expirationNoticeInDays",
+    "doNotExpireBeforeDate"
+})
+public class PasswordExpiration
+    extends ToStringGenerator
+{
 
     @XmlElement(name = "PasswordExpirationEnforced", nillable = true)
     protected Boolean passwordExpirationEnforced;
@@ -59,26 +54,35 @@ public final class PasswordExpiration extends ToStringGenerator {
 
     /**
      * Gets the value of the passwordExpirationEnforced property.
-     *
-     * @return possible object is {@link Boolean }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public Boolean getPasswordExpirationEnforced() {
+    public Boolean isPasswordExpirationEnforced() {
         return passwordExpirationEnforced;
     }
 
     /**
      * Sets the value of the passwordExpirationEnforced property.
-     *
-     * @param value allowed object is {@link Boolean }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setPasswordExpirationEnforced(final Boolean value) {
+    public void setPasswordExpirationEnforced(Boolean value) {
         this.passwordExpirationEnforced = value;
     }
 
     /**
      * Gets the value of the expirationInDays property.
-     *
-     * @return possible object is {@link Integer }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
     public Integer getExpirationInDays() {
         return expirationInDays;
@@ -86,17 +90,23 @@ public final class PasswordExpiration extends ToStringGenerator {
 
     /**
      * Sets the value of the expirationInDays property.
-     *
-     * @param value allowed object is {@link Integer }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setExpirationInDays(final Integer value) {
+    public void setExpirationInDays(Integer value) {
         this.expirationInDays = value;
     }
 
     /**
      * Gets the value of the expirationNoticeInDays property.
-     *
-     * @return possible object is {@link Integer }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
     public Integer getExpirationNoticeInDays() {
         return expirationNoticeInDays;
@@ -104,28 +114,38 @@ public final class PasswordExpiration extends ToStringGenerator {
 
     /**
      * Sets the value of the expirationNoticeInDays property.
-     *
-     * @param value allowed object is {@link Integer }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setExpirationNoticeInDays(final Integer value) {
+    public void setExpirationNoticeInDays(Integer value) {
         this.expirationNoticeInDays = value;
     }
 
     /**
      * Gets the value of the doNotExpireBeforeDate property.
-     *
-     * @return possible object is {@link XMLGregorianCalendar }
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public XMLGregorianCalendar getdoNotExpireBeforeDate() {
+    public XMLGregorianCalendar getDoNotExpireBeforeDate() {
         return doNotExpireBeforeDate;
     }
 
     /**
      * Sets the value of the doNotExpireBeforeDate property.
-     *
-     * @param value allowed object is {@link XMLGregorianCalendar }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setDoNotExpireBeforeDate(final XMLGregorianCalendar value) {
+    public void setDoNotExpireBeforeDate(XMLGregorianCalendar value) {
         this.doNotExpireBeforeDate = value;
     }
+
 }

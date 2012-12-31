@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -20,12 +6,12 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for LayoutRequest complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for LayoutRequest complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="LayoutRequest">
  *   &lt;complexContent>
@@ -40,11 +26,20 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LayoutRequest", propOrder = {"row", "group", "newRow", "newGroup"})
+@XmlType(name = "LayoutRequest", propOrder = {
+    "row",
+    "group",
+    "newRow",
+    "newGroup"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "LayoutRequest")
-public final class LayoutRequest extends ToStringGenerator {
+public class LayoutRequest
+    extends ToStringGenerator
+{
 
     @XmlElement(name = "Row", nillable = true)
     protected Reference row;
@@ -57,8 +52,11 @@ public final class LayoutRequest extends ToStringGenerator {
 
     /**
      * Gets the value of the row property.
-     *
-     * @return possible object is {@link Reference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Reference }
+     *     
      */
     public Reference getRow() {
         return row;
@@ -66,17 +64,23 @@ public final class LayoutRequest extends ToStringGenerator {
 
     /**
      * Sets the value of the row property.
-     *
-     * @param value allowed object is {@link Reference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Reference }
+     *     
      */
-    public void setRow(final Reference value) {
+    public void setRow(Reference value) {
         this.row = value;
     }
 
     /**
      * Gets the value of the group property.
-     *
-     * @return possible object is {@link Reference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Reference }
+     *     
      */
     public Reference getGroup() {
         return group;
@@ -84,17 +88,23 @@ public final class LayoutRequest extends ToStringGenerator {
 
     /**
      * Sets the value of the group property.
-     *
-     * @param value allowed object is {@link Reference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Reference }
+     *     
      */
-    public void setGroup(final Reference value) {
+    public void setGroup(Reference value) {
         this.group = value;
     }
 
     /**
      * Gets the value of the newRow property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getNewRow() {
         return newRow;
@@ -102,17 +112,23 @@ public final class LayoutRequest extends ToStringGenerator {
 
     /**
      * Sets the value of the newRow property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setNewRow(final String value) {
+    public void setNewRow(String value) {
         this.newRow = value;
     }
 
     /**
      * Gets the value of the newGroup property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getNewGroup() {
         return newGroup;
@@ -120,10 +136,14 @@ public final class LayoutRequest extends ToStringGenerator {
 
     /**
      * Sets the value of the newGroup property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setNewGroup(final String value) {
+    public void setNewGroup(String value) {
         this.newGroup = value;
     }
+
 }

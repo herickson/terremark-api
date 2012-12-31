@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -22,12 +8,12 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+
 /**
- * <p>
- * Java class for ComputePoolCpuUsageDetailSummaryEntry complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for ComputePoolCpuUsageDetailSummaryEntry complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="ComputePoolCpuUsageDetailSummaryEntry">
  *   &lt;complexContent>
@@ -40,10 +26,17 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ComputePoolCpuUsageDetailSummaryEntry", propOrder = {"time", "value"})
-public class ComputePoolCpuUsageDetailSummaryEntry extends ToStringGenerator {
+@XmlType(name = "ComputePoolCpuUsageDetailSummaryEntry", propOrder = {
+    "time",
+    "value"
+})
+public class ComputePoolCpuUsageDetailSummaryEntry
+    extends ToStringGenerator
+{
 
     @XmlElement(name = "Time")
     @XmlSchemaType(name = "dateTime")
@@ -53,8 +46,11 @@ public class ComputePoolCpuUsageDetailSummaryEntry extends ToStringGenerator {
 
     /**
      * Gets the value of the time property.
-     *
-     * @return possible object is {@link XMLGregorianCalendar }
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getTime() {
         return time;
@@ -62,17 +58,23 @@ public class ComputePoolCpuUsageDetailSummaryEntry extends ToStringGenerator {
 
     /**
      * Sets the value of the time property.
-     *
-     * @param value allowed object is {@link XMLGregorianCalendar }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setTime(final XMLGregorianCalendar value) {
+    public void setTime(XMLGregorianCalendar value) {
         this.time = value;
     }
 
     /**
      * Gets the value of the value property.
-     *
-     * @return possible object is {@link ResourceCapacity }
+     * 
+     * @return
+     *     possible object is
+     *     {@link ResourceCapacity }
+     *     
      */
     public ResourceCapacity getValue() {
         return value;
@@ -80,10 +82,14 @@ public class ComputePoolCpuUsageDetailSummaryEntry extends ToStringGenerator {
 
     /**
      * Sets the value of the value property.
-     *
-     * @param value allowed object is {@link ResourceCapacity }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ResourceCapacity }
+     *     
      */
-    public void setValue(final ResourceCapacity value) {
+    public void setValue(ResourceCapacity value) {
         this.value = value;
     }
+
 }

@@ -1,31 +1,20 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for VirtualMachineReference complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for VirtualMachineReference complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="VirtualMachineReference">
  *   &lt;complexContent>
@@ -38,18 +27,31 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="OperatingSystem" type="{}Reference" minOccurs="0"/>
  *         &lt;element name="PoweredOn" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="ToolsStatus" type="{}ToolsStatus" minOccurs="0"/>
+ *         &lt;element name="Nics" type="{}Nics" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/extension>
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VirtualMachineReference", propOrder = {"status", "processorCount", "memory", "storage",
-                "operatingSystem", "poweredOn", "toolsStatus"})
-public class VirtualMachineReference extends Reference {
+@XmlType(name = "VirtualMachineReference", propOrder = {
+    "status",
+    "processorCount",
+    "memory",
+    "storage",
+    "operatingSystem",
+    "poweredOn",
+    "toolsStatus",
+    "nics"
+})
+public class VirtualMachineReference
+    extends Reference
+{
 
-    @XmlElement(name = "Status")
+    @XmlElement(name = "Status", nillable = true)
     protected VirtualMachineStatus status;
     @XmlElement(name = "ProcessorCount", nillable = true)
     protected Integer processorCount;
@@ -63,11 +65,17 @@ public class VirtualMachineReference extends Reference {
     protected Boolean poweredOn;
     @XmlElement(name = "ToolsStatus", nillable = true)
     protected ToolsStatus toolsStatus;
+    @XmlElementWrapper(name = "Nics")
+    @XmlElement(name = "Nic")
+    protected List<VirtualNic> nics;
 
     /**
      * Gets the value of the status property.
-     *
-     * @return possible object is {@link VirtualMachineStatus }
+     * 
+     * @return
+     *     possible object is
+     *     {@link VirtualMachineStatus }
+     *     
      */
     public VirtualMachineStatus getStatus() {
         return status;
@@ -75,17 +83,23 @@ public class VirtualMachineReference extends Reference {
 
     /**
      * Sets the value of the status property.
-     *
-     * @param value allowed object is {@link VirtualMachineStatus }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link VirtualMachineStatus }
+     *     
      */
-    public void setStatus(final VirtualMachineStatus value) {
+    public void setStatus(VirtualMachineStatus value) {
         this.status = value;
     }
 
     /**
      * Gets the value of the processorCount property.
-     *
-     * @return possible object is {@link Integer }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
     public Integer getProcessorCount() {
         return processorCount;
@@ -93,17 +107,23 @@ public class VirtualMachineReference extends Reference {
 
     /**
      * Sets the value of the processorCount property.
-     *
-     * @param value allowed object is {@link Integer }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setProcessorCount(final Integer value) {
+    public void setProcessorCount(Integer value) {
         this.processorCount = value;
     }
 
     /**
      * Gets the value of the memory property.
-     *
-     * @return possible object is {@link ResourceCapacity }
+     * 
+     * @return
+     *     possible object is
+     *     {@link ResourceCapacity }
+     *     
      */
     public ResourceCapacity getMemory() {
         return memory;
@@ -111,17 +131,23 @@ public class VirtualMachineReference extends Reference {
 
     /**
      * Sets the value of the memory property.
-     *
-     * @param value allowed object is {@link ResourceCapacity }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ResourceCapacity }
+     *     
      */
-    public void setMemory(final ResourceCapacity value) {
+    public void setMemory(ResourceCapacity value) {
         this.memory = value;
     }
 
     /**
      * Gets the value of the storage property.
-     *
-     * @return possible object is {@link ResourceCapacity }
+     * 
+     * @return
+     *     possible object is
+     *     {@link ResourceCapacity }
+     *     
      */
     public ResourceCapacity getStorage() {
         return storage;
@@ -129,17 +155,23 @@ public class VirtualMachineReference extends Reference {
 
     /**
      * Sets the value of the storage property.
-     *
-     * @param value allowed object is {@link ResourceCapacity }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ResourceCapacity }
+     *     
      */
-    public void setStorage(final ResourceCapacity value) {
+    public void setStorage(ResourceCapacity value) {
         this.storage = value;
     }
 
     /**
      * Gets the value of the operatingSystem property.
-     *
-     * @return possible object is {@link Reference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Reference }
+     *     
      */
     public Reference getOperatingSystem() {
         return operatingSystem;
@@ -147,17 +179,23 @@ public class VirtualMachineReference extends Reference {
 
     /**
      * Sets the value of the operatingSystem property.
-     *
-     * @param value allowed object is {@link Reference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Reference }
+     *     
      */
-    public void setOperatingSystem(final Reference value) {
+    public void setOperatingSystem(Reference value) {
         this.operatingSystem = value;
     }
 
     /**
      * Gets the value of the poweredOn property.
-     *
-     * @return possible object is {@link Boolean }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
     public Boolean isPoweredOn() {
         return poweredOn;
@@ -165,17 +203,23 @@ public class VirtualMachineReference extends Reference {
 
     /**
      * Sets the value of the poweredOn property.
-     *
-     * @param value allowed object is {@link Boolean }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setPoweredOn(final Boolean value) {
+    public void setPoweredOn(Boolean value) {
         this.poweredOn = value;
     }
 
     /**
      * Gets the value of the toolsStatus property.
-     *
-     * @return possible object is {@link ToolsStatus }
+     * 
+     * @return
+     *     possible object is
+     *     {@link ToolsStatus }
+     *     
      */
     public ToolsStatus getToolsStatus() {
         return toolsStatus;
@@ -183,10 +227,21 @@ public class VirtualMachineReference extends Reference {
 
     /**
      * Sets the value of the toolsStatus property.
-     *
-     * @param value allowed object is {@link ToolsStatus }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ToolsStatus }
+     *     
      */
-    public void setToolsStatus(final ToolsStatus value) {
+    public void setToolsStatus(ToolsStatus value) {
         this.toolsStatus = value;
     }
+
+    public List<VirtualNic> getNics() {
+        if (nics == null) {
+            nics = new ArrayList<VirtualNic>();
+        }
+        return nics;
+    }
+
 }

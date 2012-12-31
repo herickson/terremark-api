@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -21,12 +7,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for PhysicalDevice complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for PhysicalDevice complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="PhysicalDevice">
  *   &lt;complexContent>
@@ -39,11 +25,23 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PhysicalDevice", propOrder = {"classification", "model"})
-@XmlSeeAlso({HighAvailabilityRouter.class, PhysicalRouter.class, PhysicalServer.class, StorageDevice.class})
-public class PhysicalDevice extends Device {
+@XmlType(name = "PhysicalDevice", propOrder = {
+    "classification",
+    "model"
+})
+@XmlSeeAlso({
+    HighAvailabilityRouter.class,
+    PhysicalRouter.class,
+    StorageDevice.class,
+    PhysicalServer.class
+})
+public class PhysicalDevice
+    extends Device
+{
 
     @XmlElement(name = "Classification", nillable = true)
     protected String classification;
@@ -52,8 +50,11 @@ public class PhysicalDevice extends Device {
 
     /**
      * Gets the value of the classification property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getClassification() {
         return classification;
@@ -61,17 +62,23 @@ public class PhysicalDevice extends Device {
 
     /**
      * Sets the value of the classification property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setClassification(final String value) {
+    public void setClassification(String value) {
         this.classification = value;
     }
 
     /**
      * Gets the value of the model property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getModel() {
         return model;
@@ -79,10 +86,14 @@ public class PhysicalDevice extends Device {
 
     /**
      * Sets the value of the model property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setModel(final String value) {
+    public void setModel(String value) {
         this.model = value;
     }
+
 }

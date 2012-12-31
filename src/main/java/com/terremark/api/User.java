@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -22,12 +8,12 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+
 /**
- * <p>
- * Java class for User complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for User complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="User">
  *   &lt;complexContent>
@@ -51,13 +37,29 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "User", propOrder = {"firstName", "lastName", "email", "status", "loginStatus", "lastLogin",
-                "userRole", "multifactorAuthentication", "isAdministrator", "isApiUser", "isAlertNotificationEnabled",
-                "isMultifactorAuthenticationEnabled", "apiKeys"})
+@XmlType(name = "User", propOrder = {
+    "firstName",
+    "lastName",
+    "email",
+    "status",
+    "loginStatus",
+    "lastLogin",
+    "userRole",
+    "multifactorAuthentication",
+    "isAdministrator",
+    "isApiUser",
+    "isAlertNotificationEnabled",
+    "isMultifactorAuthenticationEnabled",
+    "apiKeys"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "User")
-public final class User extends Entity {
+public class User
+    extends Entity
+{
 
     @XmlElement(name = "FirstName", nillable = true)
     protected String firstName;
@@ -89,8 +91,11 @@ public final class User extends Entity {
 
     /**
      * Gets the value of the firstName property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getFirstName() {
         return firstName;
@@ -98,17 +103,23 @@ public final class User extends Entity {
 
     /**
      * Sets the value of the firstName property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFirstName(final String value) {
+    public void setFirstName(String value) {
         this.firstName = value;
     }
 
     /**
      * Gets the value of the lastName property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getLastName() {
         return lastName;
@@ -116,17 +127,23 @@ public final class User extends Entity {
 
     /**
      * Sets the value of the lastName property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLastName(final String value) {
+    public void setLastName(String value) {
         this.lastName = value;
     }
 
     /**
      * Gets the value of the email property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getEmail() {
         return email;
@@ -134,17 +151,23 @@ public final class User extends Entity {
 
     /**
      * Sets the value of the email property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setEmail(final String value) {
+    public void setEmail(String value) {
         this.email = value;
     }
 
     /**
      * Gets the value of the status property.
-     *
-     * @return possible object is {@link UserStatus }
+     * 
+     * @return
+     *     possible object is
+     *     {@link UserStatus }
+     *     
      */
     public UserStatus getStatus() {
         return status;
@@ -152,17 +175,23 @@ public final class User extends Entity {
 
     /**
      * Sets the value of the status property.
-     *
-     * @param value allowed object is {@link UserStatus }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link UserStatus }
+     *     
      */
-    public void setStatus(final UserStatus value) {
+    public void setStatus(UserStatus value) {
         this.status = value;
     }
 
     /**
      * Gets the value of the loginStatus property.
-     *
-     * @return possible object is {@link UserLoginStatus }
+     * 
+     * @return
+     *     possible object is
+     *     {@link UserLoginStatus }
+     *     
      */
     public UserLoginStatus getLoginStatus() {
         return loginStatus;
@@ -170,17 +199,23 @@ public final class User extends Entity {
 
     /**
      * Sets the value of the loginStatus property.
-     *
-     * @param value allowed object is {@link UserLoginStatus }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link UserLoginStatus }
+     *     
      */
-    public void setLoginStatus(final UserLoginStatus value) {
+    public void setLoginStatus(UserLoginStatus value) {
         this.loginStatus = value;
     }
 
     /**
      * Gets the value of the lastLogin property.
-     *
-     * @return possible object is {@link XMLGregorianCalendar }
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getLastLogin() {
         return lastLogin;
@@ -188,17 +223,23 @@ public final class User extends Entity {
 
     /**
      * Sets the value of the lastLogin property.
-     *
-     * @param value allowed object is {@link XMLGregorianCalendar }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setLastLogin(final XMLGregorianCalendar value) {
+    public void setLastLogin(XMLGregorianCalendar value) {
         this.lastLogin = value;
     }
 
     /**
      * Gets the value of the userRole property.
-     *
-     * @return possible object is {@link UserRole }
+     * 
+     * @return
+     *     possible object is
+     *     {@link UserRole }
+     *     
      */
     public UserRole getUserRole() {
         return userRole;
@@ -206,17 +247,23 @@ public final class User extends Entity {
 
     /**
      * Sets the value of the userRole property.
-     *
-     * @param value allowed object is {@link UserRole }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link UserRole }
+     *     
      */
-    public void setUserRole(final UserRole value) {
+    public void setUserRole(UserRole value) {
         this.userRole = value;
     }
 
     /**
      * Gets the value of the multifactorAuthentication property.
-     *
-     * @return possible object is {@link MultifactorAuthentication }
+     * 
+     * @return
+     *     possible object is
+     *     {@link MultifactorAuthentication }
+     *     
      */
     public MultifactorAuthentication getMultifactorAuthentication() {
         return multifactorAuthentication;
@@ -224,17 +271,23 @@ public final class User extends Entity {
 
     /**
      * Sets the value of the multifactorAuthentication property.
-     *
-     * @param value allowed object is {@link MultifactorAuthentication }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link MultifactorAuthentication }
+     *     
      */
-    public void setMultifactorAuthentication(final MultifactorAuthentication value) {
+    public void setMultifactorAuthentication(MultifactorAuthentication value) {
         this.multifactorAuthentication = value;
     }
 
     /**
      * Gets the value of the isAdministrator property.
-     *
-     * @return possible object is {@link Boolean }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
     public Boolean isIsAdministrator() {
         return isAdministrator;
@@ -242,17 +295,23 @@ public final class User extends Entity {
 
     /**
      * Sets the value of the isAdministrator property.
-     *
-     * @param value allowed object is {@link Boolean }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setIsAdministrator(final Boolean value) {
+    public void setIsAdministrator(Boolean value) {
         this.isAdministrator = value;
     }
 
     /**
      * Gets the value of the isApiUser property.
-     *
-     * @return possible object is {@link Boolean }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
     public Boolean isIsApiUser() {
         return isApiUser;
@@ -260,17 +319,23 @@ public final class User extends Entity {
 
     /**
      * Sets the value of the isApiUser property.
-     *
-     * @param value allowed object is {@link Boolean }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setIsApiUser(final Boolean value) {
+    public void setIsApiUser(Boolean value) {
         this.isApiUser = value;
     }
 
     /**
      * Gets the value of the isAlertNotificationEnabled property.
-     *
-     * @return possible object is {@link Boolean }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
     public Boolean isIsAlertNotificationEnabled() {
         return isAlertNotificationEnabled;
@@ -278,17 +343,23 @@ public final class User extends Entity {
 
     /**
      * Sets the value of the isAlertNotificationEnabled property.
-     *
-     * @param value allowed object is {@link Boolean }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setIsAlertNotificationEnabled(final Boolean value) {
+    public void setIsAlertNotificationEnabled(Boolean value) {
         this.isAlertNotificationEnabled = value;
     }
 
     /**
      * Gets the value of the isMultifactorAuthenticationEnabled property.
-     *
-     * @return possible object is {@link Boolean }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
     public Boolean isIsMultifactorAuthenticationEnabled() {
         return isMultifactorAuthenticationEnabled;
@@ -296,17 +367,23 @@ public final class User extends Entity {
 
     /**
      * Sets the value of the isMultifactorAuthenticationEnabled property.
-     *
-     * @param value allowed object is {@link Boolean }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setIsMultifactorAuthenticationEnabled(final Boolean value) {
+    public void setIsMultifactorAuthenticationEnabled(Boolean value) {
         this.isMultifactorAuthenticationEnabled = value;
     }
 
     /**
      * Gets the value of the apiKeys property.
-     *
-     * @return possible object is {@link ApiKeys }
+     * 
+     * @return
+     *     possible object is
+     *     {@link ApiKeys }
+     *     
      */
     public ApiKeys getApiKeys() {
         return apiKeys;
@@ -314,10 +391,14 @@ public final class User extends Entity {
 
     /**
      * Sets the value of the apiKeys property.
-     *
-     * @param value allowed object is {@link ApiKeys }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ApiKeys }
+     *     
      */
-    public void setApiKeys(final ApiKeys value) {
+    public void setApiKeys(ApiKeys value) {
         this.apiKeys = value;
     }
+
 }

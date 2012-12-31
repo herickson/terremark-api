@@ -24,6 +24,7 @@ import com.terremark.api.CreateEcvMonitor;
 import com.terremark.api.CreateFirewallAcl;
 import com.terremark.api.CreateHttpMonitor;
 import com.terremark.api.CreateInternetService;
+import com.terremark.api.CreateNetworkOverlayRequest;
 import com.terremark.api.CreateNodeService;
 import com.terremark.api.CreatePingMonitor;
 import com.terremark.api.CreateRnatAssociation;
@@ -41,6 +42,7 @@ import com.terremark.api.LoopbackMonitor;
 import com.terremark.api.Network;
 import com.terremark.api.NetworkHost;
 import com.terremark.api.NetworkHostSummary;
+import com.terremark.api.NetworkReference;
 import com.terremark.api.NetworkRnat;
 import com.terremark.api.Networks;
 import com.terremark.api.NodeService;
@@ -53,6 +55,7 @@ import com.terremark.api.RnatHostAssociation;
 import com.terremark.api.Task;
 import com.terremark.api.TrustedNetworkGroup;
 import com.terremark.api.TrustedNetworkGroups;
+import com.terremark.api.VirtualMachines;
 import com.terremark.exception.TerremarkException;
 
 /**
@@ -808,6 +811,8 @@ public interface NetworkHandler {
      */
     TrustedNetworkGroup getTrustedNetworkGroupByID(String trustedNetworkGroupId) throws TerremarkException;
 
+    VirtualMachines getVirtualMachinesByNetworkID(String networkId) throws TerremarkException;
+
     /**
      * Creates an Internet service on a public IP address in an environment. If successful, the call returns information
      * regarding the Internet service that was created.
@@ -1097,6 +1102,15 @@ public interface NetworkHandler {
     Task monitorEnable(String internetServiceId) throws TerremarkException;
 
     /**
+     * Create a new network that is Secure Network Overlay capable.
+     * @param environmentId ID of the environment where the network should be created.
+     * @param overlayRequest Network overlay request
+     * @return The NetworkReference of the new network
+     * @throws TerremarkException if an error occurs  
+     */
+    NetworkReference networkOverlayCreate(String environmentId, CreateNetworkOverlayRequest overlayRequest) throws TerremarkException;
+    
+    /**
      * This method creates a node service for a specified backup Internet service in an environment. If successful, the
      * call returns information regarding the node service that was created.
      * <p/>
@@ -1242,3 +1256,4 @@ public interface NetworkHandler {
      */
     Task trustedNetworkGroupRemove(String trustedNetworkGroupId) throws TerremarkException;
 }
+

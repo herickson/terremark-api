@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -22,12 +8,12 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+
 /**
- * <p>
- * Java class for ComputePoolResourceSummary complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for ComputePoolResourceSummary complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="ComputePoolResourceSummary">
  *   &lt;complexContent>
@@ -44,12 +30,22 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ComputePoolResourceSummary", propOrder = {"startTime", "endTime", "cpu", "memory", "storage",
-                "virtualMachines"})
+@XmlType(name = "ComputePoolResourceSummary", propOrder = {
+    "startTime",
+    "endTime",
+    "cpu",
+    "memory",
+    "storage",
+    "virtualMachines"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "ComputePoolResourceSummary")
-public final class ComputePoolResourceSummary extends Resource {
+public class ComputePoolResourceSummary
+    extends Resource
+{
 
     @XmlElement(name = "StartTime")
     @XmlSchemaType(name = "dateTime")
@@ -68,8 +64,11 @@ public final class ComputePoolResourceSummary extends Resource {
 
     /**
      * Gets the value of the startTime property.
-     *
-     * @return possible object is {@link XMLGregorianCalendar }
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getStartTime() {
         return startTime;
@@ -77,17 +76,23 @@ public final class ComputePoolResourceSummary extends Resource {
 
     /**
      * Sets the value of the startTime property.
-     *
-     * @param value allowed object is {@link XMLGregorianCalendar }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setStartTime(final XMLGregorianCalendar value) {
+    public void setStartTime(XMLGregorianCalendar value) {
         this.startTime = value;
     }
 
     /**
      * Gets the value of the endTime property.
-     *
-     * @return possible object is {@link XMLGregorianCalendar }
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getEndTime() {
         return endTime;
@@ -95,17 +100,23 @@ public final class ComputePoolResourceSummary extends Resource {
 
     /**
      * Sets the value of the endTime property.
-     *
-     * @param value allowed object is {@link XMLGregorianCalendar }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setEndTime(final XMLGregorianCalendar value) {
+    public void setEndTime(XMLGregorianCalendar value) {
         this.endTime = value;
     }
 
     /**
      * Gets the value of the cpu property.
-     *
-     * @return possible object is {@link CpuComputeResourceSummary }
+     * 
+     * @return
+     *     possible object is
+     *     {@link CpuComputeResourceSummary }
+     *     
      */
     public CpuComputeResourceSummary getCpu() {
         return cpu;
@@ -113,17 +124,23 @@ public final class ComputePoolResourceSummary extends Resource {
 
     /**
      * Sets the value of the cpu property.
-     *
-     * @param value allowed object is {@link CpuComputeResourceSummary }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link CpuComputeResourceSummary }
+     *     
      */
-    public void setCpu(final CpuComputeResourceSummary value) {
+    public void setCpu(CpuComputeResourceSummary value) {
         this.cpu = value;
     }
 
     /**
      * Gets the value of the memory property.
-     *
-     * @return possible object is {@link MemoryComputeResourceSummary }
+     * 
+     * @return
+     *     possible object is
+     *     {@link MemoryComputeResourceSummary }
+     *     
      */
     public MemoryComputeResourceSummary getMemory() {
         return memory;
@@ -131,17 +148,23 @@ public final class ComputePoolResourceSummary extends Resource {
 
     /**
      * Sets the value of the memory property.
-     *
-     * @param value allowed object is {@link MemoryComputeResourceSummary }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link MemoryComputeResourceSummary }
+     *     
      */
-    public void setMemory(final MemoryComputeResourceSummary value) {
+    public void setMemory(MemoryComputeResourceSummary value) {
         this.memory = value;
     }
 
     /**
      * Gets the value of the storage property.
-     *
-     * @return possible object is {@link StorageResourceSummary }
+     * 
+     * @return
+     *     possible object is
+     *     {@link StorageResourceSummary }
+     *     
      */
     public StorageResourceSummary getStorage() {
         return storage;
@@ -149,17 +172,23 @@ public final class ComputePoolResourceSummary extends Resource {
 
     /**
      * Sets the value of the storage property.
-     *
-     * @param value allowed object is {@link StorageResourceSummary }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link StorageResourceSummary }
+     *     
      */
-    public void setStorage(final StorageResourceSummary value) {
+    public void setStorage(StorageResourceSummary value) {
         this.storage = value;
     }
 
     /**
      * Gets the value of the virtualMachines property.
-     *
-     * @return possible object is {@link VirtualMachineResourceSummary }
+     * 
+     * @return
+     *     possible object is
+     *     {@link VirtualMachineResourceSummary }
+     *     
      */
     public VirtualMachineResourceSummary getVirtualMachines() {
         return virtualMachines;
@@ -167,10 +196,14 @@ public final class ComputePoolResourceSummary extends Resource {
 
     /**
      * Sets the value of the virtualMachines property.
-     *
-     * @param value allowed object is {@link VirtualMachineResourceSummary }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link VirtualMachineResourceSummary }
+     *     
      */
-    public void setVirtualMachines(final VirtualMachineResourceSummary value) {
+    public void setVirtualMachines(VirtualMachineResourceSummary value) {
         this.virtualMachines = value;
     }
+
 }

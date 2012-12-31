@@ -12,11 +12,11 @@
     <groupId>com.terremark</groupId>
     <artifactId>terremark-api</artifactId>
     <packaging>jar</packaging>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.3-SNAPSHOT</version>
 
     <name>Terremark Cloud API</name>
     <description>Terremark Enterprise Cloud Java API</description>
-    <url>https://github.com/spasam/terremark-api</url>
+    <url>https://github.com/herickson/terremark-api</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -41,10 +41,10 @@
 
     <developers>
         <developer>
-            <id>spasam</id>
-            <name>Seshu Pasam</name>
-            <email>spasam@terremark.com</email>
-            <url>https://github.com/spasam</url>
+            <id>herickson</id>
+            <name>Herb Erickson</name>
+            <email>herickson@terremark.com</email>
+            <url>https://github.com/herickson</url>
             <organization>Terremark</organization>
             <organizationUrl>http://www.terremark.com</organizationUrl>
             <roles>
@@ -55,14 +55,14 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:spasam/terremark-api.git</connection>
-        <url>scm:git:git@github.com:spasam/terremark-api.git</url>
-        <developerConnection>scm:git:git@github.com:spasam/terremark-api.git</developerConnection>
+        <connection>scm:git:git@github.com:herickson/terremark-api.git</connection>
+        <url>scm:git:git@github.com:herickson/terremark-api.git</url>
+        <developerConnection>scm:git:git@github.com:herickson/terremark-api.git</developerConnection>
     </scm>
 
     <issueManagement>
         <system>GitHub Issues</system>
-        <url>https://github.com/spasam/terremark-api/issues</url>
+        <url>https://github.com/herickson/terremark-api/issues</url>
     </issueManagement>
 
     <ciManagement>

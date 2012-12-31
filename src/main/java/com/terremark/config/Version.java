@@ -30,7 +30,18 @@ public enum Version {
     /** Version 2.12 */
     VERSION_2_12("2012-03-01"),
     /** Version 2.13 */
-    VERSION_2_13("2012-06-01");
+    VERSION_2_13("2012-06-01"),
+    /** Version 2.13 */
+    VERSION_2_14("2012-07-01"),
+    /** Version 2.13 */
+    VERSION_2_15("2012-09-01"),
+    /** Version 2.13 */
+    VERSION_2_16("2012-10-01"),
+    /** Version 2.13 */
+    VERSION_2_17("2012-12-01"),
+    /** Version 2.13 */
+    VERSION_2_18("2013-02-01");
+    
 
     /** Version release date */
     private final String versionDate;

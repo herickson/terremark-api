@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -20,12 +6,12 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for CatalogItemFile complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for CatalogItemFile complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="CatalogItemFile">
  *   &lt;complexContent>
@@ -41,10 +27,20 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CatalogItemFile", propOrder = {"uploadUrl", "name", "size", "bytesTransferred", "status"})
-public class CatalogItemFile extends ToStringGenerator {
+@XmlType(name = "CatalogItemFile", propOrder = {
+    "uploadUrl",
+    "name",
+    "size",
+    "bytesTransferred",
+    "status"
+})
+public class CatalogItemFile
+    extends ToStringGenerator
+{
 
     @XmlElement(name = "UploadUrl", nillable = true)
     protected String uploadUrl;
@@ -59,8 +55,11 @@ public class CatalogItemFile extends ToStringGenerator {
 
     /**
      * Gets the value of the uploadUrl property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getUploadUrl() {
         return uploadUrl;
@@ -68,17 +67,23 @@ public class CatalogItemFile extends ToStringGenerator {
 
     /**
      * Sets the value of the uploadUrl property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setUploadUrl(final String value) {
+    public void setUploadUrl(String value) {
         this.uploadUrl = value;
     }
 
     /**
      * Gets the value of the name property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getName() {
         return name;
@@ -86,17 +91,23 @@ public class CatalogItemFile extends ToStringGenerator {
 
     /**
      * Sets the value of the name property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(final String value) {
+    public void setName(String value) {
         this.name = value;
     }
 
     /**
      * Gets the value of the size property.
-     *
-     * @return possible object is {@link ResourceCapacity }
+     * 
+     * @return
+     *     possible object is
+     *     {@link ResourceCapacity }
+     *     
      */
     public ResourceCapacity getSize() {
         return size;
@@ -104,17 +115,23 @@ public class CatalogItemFile extends ToStringGenerator {
 
     /**
      * Sets the value of the size property.
-     *
-     * @param value allowed object is {@link ResourceCapacity }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ResourceCapacity }
+     *     
      */
-    public void setSize(final ResourceCapacity value) {
+    public void setSize(ResourceCapacity value) {
         this.size = value;
     }
 
     /**
      * Gets the value of the bytesTransferred property.
-     *
-     * @return possible object is {@link Long }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Long }
+     *     
      */
     public Long getBytesTransferred() {
         return bytesTransferred;
@@ -122,17 +139,23 @@ public class CatalogItemFile extends ToStringGenerator {
 
     /**
      * Sets the value of the bytesTransferred property.
-     *
-     * @param value allowed object is {@link Long }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Long }
+     *     
      */
-    public void setBytesTransferred(final Long value) {
+    public void setBytesTransferred(Long value) {
         this.bytesTransferred = value;
     }
 
     /**
      * Gets the value of the status property.
-     *
-     * @return possible object is {@link FileUploadStatus }
+     * 
+     * @return
+     *     possible object is
+     *     {@link FileUploadStatus }
+     *     
      */
     public FileUploadStatus getStatus() {
         return status;
@@ -140,10 +163,14 @@ public class CatalogItemFile extends ToStringGenerator {
 
     /**
      * Sets the value of the status property.
-     *
-     * @param value allowed object is {@link FileUploadStatus }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FileUploadStatus }
+     *     
      */
-    public void setStatus(final FileUploadStatus value) {
+    public void setStatus(FileUploadStatus value) {
         this.status = value;
     }
+
 }

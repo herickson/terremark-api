@@ -1,35 +1,20 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for EnvironmentNetworkSummary complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for EnvironmentNetworkSummary complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="EnvironmentNetworkSummary">
  *   &lt;complexContent>
@@ -46,12 +31,22 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "EnvironmentNetworkSummary", propOrder = {"networks", "publicIpAddresses", "internetServices",
-                "nodeServices", "firewallAcls", "trustedNetworkGroups"})
+@XmlType(name = "EnvironmentNetworkSummary", propOrder = {
+    "networks",
+    "publicIpAddresses",
+    "internetServices",
+    "nodeServices",
+    "firewallAcls",
+    "trustedNetworkGroups"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "EnvironmentNetworkSummary")
-public final class EnvironmentNetworkSummary extends Resource {
+public class EnvironmentNetworkSummary
+    extends Resource
+{
 
     @XmlElement(name = "Networks", nillable = true)
     protected NetworkHostSummary networks;
@@ -72,8 +67,11 @@ public final class EnvironmentNetworkSummary extends Resource {
 
     /**
      * Gets the value of the networks property.
-     *
-     * @return possible object is {@link NetworkHostSummary }
+     * 
+     * @return
+     *     possible object is
+     *     {@link NetworkHostSummary }
+     *     
      */
     public NetworkHostSummary getNetworks() {
         return networks;
@@ -81,17 +79,23 @@ public final class EnvironmentNetworkSummary extends Resource {
 
     /**
      * Sets the value of the networks property.
-     *
-     * @param value allowed object is {@link NetworkHostSummary }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link NetworkHostSummary }
+     *     
      */
-    public void setNetworks(final NetworkHostSummary value) {
+    public void setNetworks(NetworkHostSummary value) {
         this.networks = value;
     }
 
     /**
      * Gets the value of the publicIpAddresses property.
-     *
-     * @return possible object is {@link PublicIpAddresses }
+     * 
+     * @return
+     *     possible object is
+     *     {@link PublicIpAddresses }
+     *     
      */
     public PublicIpAddresses getPublicIpAddresses() {
         return publicIpAddresses;
@@ -99,10 +103,13 @@ public final class EnvironmentNetworkSummary extends Resource {
 
     /**
      * Sets the value of the publicIpAddresses property.
-     *
-     * @param value allowed object is {@link PublicIpAddresses }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PublicIpAddresses }
+     *     
      */
-    public void setPublicIpAddresses(final PublicIpAddresses value) {
+    public void setPublicIpAddresses(PublicIpAddresses value) {
         this.publicIpAddresses = value;
     }
 
@@ -133,4 +140,5 @@ public final class EnvironmentNetworkSummary extends Resource {
         }
         return trustedNetworkGroups;
     }
+
 }

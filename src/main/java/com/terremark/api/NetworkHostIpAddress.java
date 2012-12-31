@@ -1,35 +1,20 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for NetworkHostIpAddress complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for NetworkHostIpAddress complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="NetworkHostIpAddress">
  *   &lt;complexContent>
@@ -44,10 +29,19 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NetworkHostIpAddress", propOrder = {"nodeServices", "firewallAcls", "firewallLog", "rnat"})
-public class NetworkHostIpAddress extends Reference {
+@XmlType(name = "NetworkHostIpAddress", propOrder = {
+    "nodeServices",
+    "firewallAcls",
+    "firewallLog",
+    "rnat"
+})
+public class NetworkHostIpAddress
+    extends Reference
+{
 
     @XmlElement(name = "FirewallLog", nillable = true)
     protected Reference firewallLog;
@@ -62,8 +56,11 @@ public class NetworkHostIpAddress extends Reference {
 
     /**
      * Gets the value of the firewallLog property.
-     *
-     * @return possible object is {@link Reference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Reference }
+     *     
      */
     public Reference getFirewallLog() {
         return firewallLog;
@@ -71,17 +68,23 @@ public class NetworkHostIpAddress extends Reference {
 
     /**
      * Sets the value of the firewallLog property.
-     *
-     * @param value allowed object is {@link Reference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Reference }
+     *     
      */
-    public void setFirewallLog(final Reference value) {
+    public void setFirewallLog(Reference value) {
         this.firewallLog = value;
     }
 
     /**
      * Gets the value of the rnat property.
-     *
-     * @return possible object is {@link Reference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Reference }
+     *     
      */
     public Reference getRnat() {
         return rnat;
@@ -89,10 +92,13 @@ public class NetworkHostIpAddress extends Reference {
 
     /**
      * Sets the value of the rnat property.
-     *
-     * @param value allowed object is {@link Reference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Reference }
+     *     
      */
-    public void setRnat(final Reference value) {
+    public void setRnat(Reference value) {
         this.rnat = value;
     }
 
@@ -109,4 +115,5 @@ public class NetworkHostIpAddress extends Reference {
         }
         return firewallAcls;
     }
+
 }

@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -21,12 +7,12 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for InviteUser complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for InviteUser complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="InviteUser">
  *   &lt;complexContent>
@@ -43,11 +29,21 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "InviteUser", propOrder = {"contact", "firstName", "lastName", "userRole", "multifactorAuthentication"})
+@XmlType(name = "InviteUser", propOrder = {
+    "contact",
+    "firstName",
+    "lastName",
+    "userRole",
+    "multifactorAuthentication"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "InviteUser")
-public final class InviteUser extends ToStringGenerator {
+public class InviteUser
+    extends ToStringGenerator
+{
 
     @XmlElement(name = "Contact", nillable = true)
     protected Reference contact;
@@ -64,8 +60,11 @@ public final class InviteUser extends ToStringGenerator {
 
     /**
      * Gets the value of the contact property.
-     *
-     * @return possible object is {@link Reference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Reference }
+     *     
      */
     public Reference getContact() {
         return contact;
@@ -73,17 +72,23 @@ public final class InviteUser extends ToStringGenerator {
 
     /**
      * Sets the value of the contact property.
-     *
-     * @param value allowed object is {@link Reference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Reference }
+     *     
      */
-    public void setContact(final Reference value) {
+    public void setContact(Reference value) {
         this.contact = value;
     }
 
     /**
      * Gets the value of the firstName property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getFirstName() {
         return firstName;
@@ -91,17 +96,23 @@ public final class InviteUser extends ToStringGenerator {
 
     /**
      * Sets the value of the firstName property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFirstName(final String value) {
+    public void setFirstName(String value) {
         this.firstName = value;
     }
 
     /**
      * Gets the value of the lastName property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getLastName() {
         return lastName;
@@ -109,17 +120,23 @@ public final class InviteUser extends ToStringGenerator {
 
     /**
      * Sets the value of the lastName property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLastName(final String value) {
+    public void setLastName(String value) {
         this.lastName = value;
     }
 
     /**
      * Gets the value of the userRole property.
-     *
-     * @return possible object is {@link UserRole }
+     * 
+     * @return
+     *     possible object is
+     *     {@link UserRole }
+     *     
      */
     public UserRole getUserRole() {
         return userRole;
@@ -127,17 +144,23 @@ public final class InviteUser extends ToStringGenerator {
 
     /**
      * Sets the value of the userRole property.
-     *
-     * @param value allowed object is {@link UserRole }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link UserRole }
+     *     
      */
-    public void setUserRole(final UserRole value) {
+    public void setUserRole(UserRole value) {
         this.userRole = value;
     }
 
     /**
      * Gets the value of the multifactorAuthentication property.
-     *
-     * @return possible object is {@link MultifactorAuthentication }
+     * 
+     * @return
+     *     possible object is
+     *     {@link MultifactorAuthentication }
+     *     
      */
     public MultifactorAuthentication getMultifactorAuthentication() {
         return multifactorAuthentication;
@@ -145,17 +168,23 @@ public final class InviteUser extends ToStringGenerator {
 
     /**
      * Sets the value of the multifactorAuthentication property.
-     *
-     * @param value allowed object is {@link MultifactorAuthentication }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link MultifactorAuthentication }
+     *     
      */
-    public void setMultifactorAuthentication(final MultifactorAuthentication value) {
+    public void setMultifactorAuthentication(MultifactorAuthentication value) {
         this.multifactorAuthentication = value;
     }
 
     /**
      * Gets the value of the name property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getName() {
         return name;
@@ -163,10 +192,14 @@ public final class InviteUser extends ToStringGenerator {
 
     /**
      * Sets the value of the name property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(final String value) {
+    public void setName(String value) {
         this.name = value;
     }
+
 }

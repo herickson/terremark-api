@@ -1,23 +1,8 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -25,12 +10,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for CopyVirtualMachine complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for CopyVirtualMachine complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="CopyVirtualMachine">
  *   &lt;complexContent>
@@ -52,13 +37,26 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CopyVirtualMachine", propOrder = {"source", "processorCount", "memory", "layout",
-                "disableCustomization", "linuxCustomization", "windowsCustomization", "description", "tags",
-                "poweredOn"})
+@XmlType(name = "CopyVirtualMachine", propOrder = {
+    "source",
+    "processorCount",
+    "memory",
+    "layout",
+    "disableCustomization",
+    "linuxCustomization",
+    "windowsCustomization",
+    "description",
+    "tags",
+    "poweredOn"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "CopyVirtualMachine")
-public final class CopyVirtualMachine extends ToStringGenerator {
+public class CopyVirtualMachine
+    extends ToStringGenerator
+{
 
     @XmlElement(name = "Source", required = true, nillable = true)
     protected Reference source;
@@ -86,8 +84,11 @@ public final class CopyVirtualMachine extends ToStringGenerator {
 
     /**
      * Gets the value of the source property.
-     *
-     * @return possible object is {@link Reference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Reference }
+     *     
      */
     public Reference getSource() {
         return source;
@@ -95,17 +96,23 @@ public final class CopyVirtualMachine extends ToStringGenerator {
 
     /**
      * Sets the value of the source property.
-     *
-     * @param value allowed object is {@link Reference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Reference }
+     *     
      */
-    public void setSource(final Reference value) {
+    public void setSource(Reference value) {
         this.source = value;
     }
 
     /**
      * Gets the value of the processorCount property.
-     *
-     * @return possible object is {@link Integer }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
     public Integer getProcessorCount() {
         return processorCount;
@@ -113,17 +120,23 @@ public final class CopyVirtualMachine extends ToStringGenerator {
 
     /**
      * Sets the value of the processorCount property.
-     *
-     * @param value allowed object is {@link Integer }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setProcessorCount(final Integer value) {
+    public void setProcessorCount(Integer value) {
         this.processorCount = value;
     }
 
     /**
      * Gets the value of the memory property.
-     *
-     * @return possible object is {@link ResourceCapacity }
+     * 
+     * @return
+     *     possible object is
+     *     {@link ResourceCapacity }
+     *     
      */
     public ResourceCapacity getMemory() {
         return memory;
@@ -131,17 +144,23 @@ public final class CopyVirtualMachine extends ToStringGenerator {
 
     /**
      * Sets the value of the memory property.
-     *
-     * @param value allowed object is {@link ResourceCapacity }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ResourceCapacity }
+     *     
      */
-    public void setMemory(final ResourceCapacity value) {
+    public void setMemory(ResourceCapacity value) {
         this.memory = value;
     }
 
     /**
      * Gets the value of the layout property.
-     *
-     * @return possible object is {@link LayoutRequest }
+     * 
+     * @return
+     *     possible object is
+     *     {@link LayoutRequest }
+     *     
      */
     public LayoutRequest getLayout() {
         return layout;
@@ -149,17 +168,23 @@ public final class CopyVirtualMachine extends ToStringGenerator {
 
     /**
      * Sets the value of the layout property.
-     *
-     * @param value allowed object is {@link LayoutRequest }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link LayoutRequest }
+     *     
      */
-    public void setLayout(final LayoutRequest value) {
+    public void setLayout(LayoutRequest value) {
         this.layout = value;
     }
 
     /**
      * Gets the value of the disableCustomization property.
-     *
-     * @return possible object is {@link Boolean }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
     public Boolean isDisableCustomization() {
         return disableCustomization;
@@ -167,17 +192,23 @@ public final class CopyVirtualMachine extends ToStringGenerator {
 
     /**
      * Sets the value of the disableCustomization property.
-     *
-     * @param value allowed object is {@link Boolean }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setDisableCustomization(final Boolean value) {
+    public void setDisableCustomization(Boolean value) {
         this.disableCustomization = value;
     }
 
     /**
      * Gets the value of the linuxCustomization property.
-     *
-     * @return possible object is {@link LinuxCustomization }
+     * 
+     * @return
+     *     possible object is
+     *     {@link LinuxCustomization }
+     *     
      */
     public LinuxCustomization getLinuxCustomization() {
         return linuxCustomization;
@@ -185,17 +216,23 @@ public final class CopyVirtualMachine extends ToStringGenerator {
 
     /**
      * Sets the value of the linuxCustomization property.
-     *
-     * @param value allowed object is {@link LinuxCustomization }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link LinuxCustomization }
+     *     
      */
-    public void setLinuxCustomization(final LinuxCustomization value) {
+    public void setLinuxCustomization(LinuxCustomization value) {
         this.linuxCustomization = value;
     }
 
     /**
      * Gets the value of the windowsCustomization property.
-     *
-     * @return possible object is {@link WindowsCustomization }
+     * 
+     * @return
+     *     possible object is
+     *     {@link WindowsCustomization }
+     *     
      */
     public WindowsCustomization getWindowsCustomization() {
         return windowsCustomization;
@@ -203,17 +240,23 @@ public final class CopyVirtualMachine extends ToStringGenerator {
 
     /**
      * Sets the value of the windowsCustomization property.
-     *
-     * @param value allowed object is {@link WindowsCustomization }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link WindowsCustomization }
+     *     
      */
-    public void setWindowsCustomization(final WindowsCustomization value) {
+    public void setWindowsCustomization(WindowsCustomization value) {
         this.windowsCustomization = value;
     }
 
     /**
      * Gets the value of the description property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getDescription() {
         return description;
@@ -221,17 +264,23 @@ public final class CopyVirtualMachine extends ToStringGenerator {
 
     /**
      * Sets the value of the description property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(final String value) {
+    public void setDescription(String value) {
         this.description = value;
     }
 
     /**
      * Gets the value of the poweredOn property.
-     *
-     * @return possible object is {@link Boolean }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
     public Boolean isPoweredOn() {
         return poweredOn;
@@ -239,17 +288,23 @@ public final class CopyVirtualMachine extends ToStringGenerator {
 
     /**
      * Sets the value of the poweredOn property.
-     *
-     * @param value allowed object is {@link Boolean }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setPoweredOn(final Boolean value) {
+    public void setPoweredOn(Boolean value) {
         this.poweredOn = value;
     }
 
     /**
      * Gets the value of the name property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getName() {
         return name;
@@ -257,10 +312,13 @@ public final class CopyVirtualMachine extends ToStringGenerator {
 
     /**
      * Sets the value of the name property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(final String value) {
+    public void setName(String value) {
         this.name = value;
     }
 
@@ -270,4 +328,5 @@ public final class CopyVirtualMachine extends ToStringGenerator {
         }
         return tags;
     }
+
 }

@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -20,12 +6,12 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for FirewallAcl complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for FirewallAcl complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="FirewallAcl">
  *   &lt;complexContent>
@@ -43,12 +29,23 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FirewallAcl", propOrder = {"permission", "aclType", "portType", "protocol", "source", "destination",
-                "portRange"})
+@XmlType(name = "FirewallAcl", propOrder = {
+    "permission",
+    "aclType",
+    "portType",
+    "protocol",
+    "source",
+    "destination",
+    "portRange"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "FirewallAcl")
-public final class FirewallAcl extends Entity {
+public class FirewallAcl
+    extends Entity
+{
 
     @XmlElement(name = "Permission")
     protected AclPermissionTypeEnum permission;
@@ -67,8 +64,11 @@ public final class FirewallAcl extends Entity {
 
     /**
      * Gets the value of the permission property.
-     *
-     * @return possible object is {@link AclPermissionTypeEnum }
+     * 
+     * @return
+     *     possible object is
+     *     {@link AclPermissionTypeEnum }
+     *     
      */
     public AclPermissionTypeEnum getPermission() {
         return permission;
@@ -76,17 +76,23 @@ public final class FirewallAcl extends Entity {
 
     /**
      * Sets the value of the permission property.
-     *
-     * @param value allowed object is {@link AclPermissionTypeEnum }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AclPermissionTypeEnum }
+     *     
      */
-    public void setPermission(final AclPermissionTypeEnum value) {
+    public void setPermission(AclPermissionTypeEnum value) {
         this.permission = value;
     }
 
     /**
      * Gets the value of the aclType property.
-     *
-     * @return possible object is {@link AclTypeEnum }
+     * 
+     * @return
+     *     possible object is
+     *     {@link AclTypeEnum }
+     *     
      */
     public AclTypeEnum getAclType() {
         return aclType;
@@ -94,17 +100,23 @@ public final class FirewallAcl extends Entity {
 
     /**
      * Sets the value of the aclType property.
-     *
-     * @param value allowed object is {@link AclTypeEnum }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AclTypeEnum }
+     *     
      */
-    public void setAclType(final AclTypeEnum value) {
+    public void setAclType(AclTypeEnum value) {
         this.aclType = value;
     }
 
     /**
      * Gets the value of the portType property.
-     *
-     * @return possible object is {@link AclPortTypeEnum }
+     * 
+     * @return
+     *     possible object is
+     *     {@link AclPortTypeEnum }
+     *     
      */
     public AclPortTypeEnum getPortType() {
         return portType;
@@ -112,17 +124,23 @@ public final class FirewallAcl extends Entity {
 
     /**
      * Sets the value of the portType property.
-     *
-     * @param value allowed object is {@link AclPortTypeEnum }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AclPortTypeEnum }
+     *     
      */
-    public void setPortType(final AclPortTypeEnum value) {
+    public void setPortType(AclPortTypeEnum value) {
         this.portType = value;
     }
 
     /**
      * Gets the value of the protocol property.
-     *
-     * @return possible object is {@link ProtocolTypeEnum }
+     * 
+     * @return
+     *     possible object is
+     *     {@link ProtocolTypeEnum }
+     *     
      */
     public ProtocolTypeEnum getProtocol() {
         return protocol;
@@ -130,17 +148,23 @@ public final class FirewallAcl extends Entity {
 
     /**
      * Sets the value of the protocol property.
-     *
-     * @param value allowed object is {@link ProtocolTypeEnum }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ProtocolTypeEnum }
+     *     
      */
-    public void setProtocol(final ProtocolTypeEnum value) {
+    public void setProtocol(ProtocolTypeEnum value) {
         this.protocol = value;
     }
 
     /**
      * Gets the value of the source property.
-     *
-     * @return possible object is {@link FirewallAclEndpoint }
+     * 
+     * @return
+     *     possible object is
+     *     {@link FirewallAclEndpoint }
+     *     
      */
     public FirewallAclEndpoint getSource() {
         return source;
@@ -148,17 +172,23 @@ public final class FirewallAcl extends Entity {
 
     /**
      * Sets the value of the source property.
-     *
-     * @param value allowed object is {@link FirewallAclEndpoint }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FirewallAclEndpoint }
+     *     
      */
-    public void setSource(final FirewallAclEndpoint value) {
+    public void setSource(FirewallAclEndpoint value) {
         this.source = value;
     }
 
     /**
      * Gets the value of the destination property.
-     *
-     * @return possible object is {@link FirewallAclEndpoint }
+     * 
+     * @return
+     *     possible object is
+     *     {@link FirewallAclEndpoint }
+     *     
      */
     public FirewallAclEndpoint getDestination() {
         return destination;
@@ -166,17 +196,23 @@ public final class FirewallAcl extends Entity {
 
     /**
      * Sets the value of the destination property.
-     *
-     * @param value allowed object is {@link FirewallAclEndpoint }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FirewallAclEndpoint }
+     *     
      */
-    public void setDestination(final FirewallAclEndpoint value) {
+    public void setDestination(FirewallAclEndpoint value) {
         this.destination = value;
     }
 
     /**
      * Gets the value of the portRange property.
-     *
-     * @return possible object is {@link PortRange }
+     * 
+     * @return
+     *     possible object is
+     *     {@link PortRange }
+     *     
      */
     public PortRange getPortRange() {
         return portRange;
@@ -184,10 +220,14 @@ public final class FirewallAcl extends Entity {
 
     /**
      * Sets the value of the portRange property.
-     *
-     * @param value allowed object is {@link PortRange }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PortRange }
+     *     
      */
-    public void setPortRange(final PortRange value) {
+    public void setPortRange(PortRange value) {
         this.portRange = value;
     }
+
 }

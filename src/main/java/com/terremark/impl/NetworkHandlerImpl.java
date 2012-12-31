@@ -17,6 +17,7 @@ package com.terremark.impl;
 
 import static com.terremark.config.Version.VERSION_2_10;
 import static com.terremark.config.Version.VERSION_2_11;
+import static com.terremark.config.Version.VERSION_2_18;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -32,6 +33,7 @@ import com.terremark.api.CreateEcvMonitor;
 import com.terremark.api.CreateFirewallAcl;
 import com.terremark.api.CreateHttpMonitor;
 import com.terremark.api.CreateInternetService;
+import com.terremark.api.CreateNetworkOverlayRequest;
 import com.terremark.api.CreateNodeService;
 import com.terremark.api.CreatePingMonitor;
 import com.terremark.api.CreateRnatAssociation;
@@ -49,6 +51,7 @@ import com.terremark.api.LoopbackMonitor;
 import com.terremark.api.Network;
 import com.terremark.api.NetworkHost;
 import com.terremark.api.NetworkHostSummary;
+import com.terremark.api.NetworkReference;
 import com.terremark.api.NetworkRnat;
 import com.terremark.api.Networks;
 import com.terremark.api.NodeService;
@@ -61,6 +64,7 @@ import com.terremark.api.RnatHostAssociation;
 import com.terremark.api.Task;
 import com.terremark.api.TrustedNetworkGroup;
 import com.terremark.api.TrustedNetworkGroups;
+import com.terremark.api.VirtualMachines;
 import com.terremark.exception.TerremarkException;
 import com.terremark.impl.QueryArgument.Type;
 
@@ -384,6 +388,11 @@ final class NetworkHandlerImpl extends AbstractAPIImpl implements NetworkHandler
                         trustedNetworkGroupId);
     }
 
+    @Override
+    public VirtualMachines getVirtualMachinesByNetworkID(String networkId) throws TerremarkException {
+        return get(VERSION_2_18, "/virtualMachines/networks/{networkId}", VirtualMachines.class, networkId);
+    }
+
     /**
      * {@inheritDoc}
      */
@@ -547,6 +556,12 @@ final class NetworkHandlerImpl extends AbstractAPIImpl implements NetworkHandler
         return post(VERSION_2_10, "/internetServices/{internetServiceId}/action/enableMonitor", Task.class, null,
                         internetServiceId);
     }
+    
+    @Override
+    public NetworkReference networkOverlayCreate(String environmentId, CreateNetworkOverlayRequest req) throws TerremarkException {
+        return post(VERSION_2_18, "/networks/environments/{environmentId}/action/createNetworkOverlay", NetworkReference.class, req,
+                environmentId);
+    }
 
     /**
      * {@inheritDoc}
@@ -630,3 +645,4 @@ final class NetworkHandlerImpl extends AbstractAPIImpl implements NetworkHandler
         return delete(VERSION_2_10, "/trustedNetworkGroups/{trustedNetworkGroupId}", Task.class, trustedNetworkGroupId);
     }
 }
+

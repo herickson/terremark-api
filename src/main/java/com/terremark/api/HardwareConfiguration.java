@@ -1,35 +1,20 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for HardwareConfiguration complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for HardwareConfiguration complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="HardwareConfiguration">
  *   &lt;complexContent>
@@ -44,11 +29,20 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "HardwareConfiguration", propOrder = {"processorCount", "memory", "disks", "nics"})
+@XmlType(name = "HardwareConfiguration", propOrder = {
+    "processorCount",
+    "memory",
+    "disks",
+    "nics"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "HardwareConfiguration")
-public final class HardwareConfiguration extends Resource {
+public class HardwareConfiguration
+    extends Resource
+{
 
     @XmlElement(name = "ProcessorCount")
     protected Integer processorCount;
@@ -63,8 +57,11 @@ public final class HardwareConfiguration extends Resource {
 
     /**
      * Gets the value of the processorCount property.
-     *
-     * @return possible object is {@link Integer }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
     public Integer getProcessorCount() {
         return processorCount;
@@ -72,17 +69,23 @@ public final class HardwareConfiguration extends Resource {
 
     /**
      * Sets the value of the processorCount property.
-     *
-     * @param value allowed object is {@link Integer }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setProcessorCount(final Integer value) {
+    public void setProcessorCount(Integer value) {
         this.processorCount = value;
     }
 
     /**
      * Gets the value of the memory property.
-     *
-     * @return possible object is {@link ResourceCapacity }
+     * 
+     * @return
+     *     possible object is
+     *     {@link ResourceCapacity }
+     *     
      */
     public ResourceCapacity getMemory() {
         return memory;
@@ -90,10 +93,13 @@ public final class HardwareConfiguration extends Resource {
 
     /**
      * Sets the value of the memory property.
-     *
-     * @param value allowed object is {@link ResourceCapacity }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ResourceCapacity }
+     *     
      */
-    public void setMemory(final ResourceCapacity value) {
+    public void setMemory(ResourceCapacity value) {
         this.memory = value;
     }
 
@@ -110,4 +116,5 @@ public final class HardwareConfiguration extends Resource {
         }
         return nics;
     }
+
 }

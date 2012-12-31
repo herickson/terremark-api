@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -20,12 +6,12 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for AlertRule complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for AlertRule complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="AlertRule">
  *   &lt;complexContent>
@@ -41,11 +27,21 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertRule", propOrder = {"alertRuleTemplate", "ruleGroup", "threshold", "ruleAction", "configuration"})
+@XmlType(name = "AlertRule", propOrder = {
+    "alertRuleTemplate",
+    "ruleGroup",
+    "threshold",
+    "ruleAction",
+    "configuration"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "AlertRule")
-public final class AlertRule extends Resource {
+public class AlertRule
+    extends Resource
+{
 
     @XmlElement(name = "AlertRuleTemplate", nillable = true)
     protected Reference alertRuleTemplate;
@@ -60,8 +56,11 @@ public final class AlertRule extends Resource {
 
     /**
      * Gets the value of the alertRuleTemplate property.
-     *
-     * @return possible object is {@link Reference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Reference }
+     *     
      */
     public Reference getAlertRuleTemplate() {
         return alertRuleTemplate;
@@ -69,17 +68,23 @@ public final class AlertRule extends Resource {
 
     /**
      * Sets the value of the alertRuleTemplate property.
-     *
-     * @param value allowed object is {@link Reference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Reference }
+     *     
      */
-    public void setAlertRuleTemplate(final Reference value) {
+    public void setAlertRuleTemplate(Reference value) {
         this.alertRuleTemplate = value;
     }
 
     /**
      * Gets the value of the ruleGroup property.
-     *
-     * @return possible object is {@link AlertRuleGroup }
+     * 
+     * @return
+     *     possible object is
+     *     {@link AlertRuleGroup }
+     *     
      */
     public AlertRuleGroup getRuleGroup() {
         return ruleGroup;
@@ -87,17 +92,23 @@ public final class AlertRule extends Resource {
 
     /**
      * Sets the value of the ruleGroup property.
-     *
-     * @param value allowed object is {@link AlertRuleGroup }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AlertRuleGroup }
+     *     
      */
-    public void setRuleGroup(final AlertRuleGroup value) {
+    public void setRuleGroup(AlertRuleGroup value) {
         this.ruleGroup = value;
     }
 
     /**
      * Gets the value of the threshold property.
-     *
-     * @return possible object is {@link Threshold }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Threshold }
+     *     
      */
     public Threshold getThreshold() {
         return threshold;
@@ -105,17 +116,23 @@ public final class AlertRule extends Resource {
 
     /**
      * Sets the value of the threshold property.
-     *
-     * @param value allowed object is {@link Threshold }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Threshold }
+     *     
      */
-    public void setThreshold(final Threshold value) {
+    public void setThreshold(Threshold value) {
         this.threshold = value;
     }
 
     /**
      * Gets the value of the ruleAction property.
-     *
-     * @return possible object is {@link AlertRuleAction }
+     * 
+     * @return
+     *     possible object is
+     *     {@link AlertRuleAction }
+     *     
      */
     public AlertRuleAction getRuleAction() {
         return ruleAction;
@@ -123,17 +140,23 @@ public final class AlertRule extends Resource {
 
     /**
      * Sets the value of the ruleAction property.
-     *
-     * @param value allowed object is {@link AlertRuleAction }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AlertRuleAction }
+     *     
      */
-    public void setRuleAction(final AlertRuleAction value) {
+    public void setRuleAction(AlertRuleAction value) {
         this.ruleAction = value;
     }
 
     /**
      * Gets the value of the configuration property.
-     *
-     * @return possible object is {@link Configuration }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Configuration }
+     *     
      */
     public Configuration getConfiguration() {
         return configuration;
@@ -141,10 +164,14 @@ public final class AlertRule extends Resource {
 
     /**
      * Sets the value of the configuration property.
-     *
-     * @param value allowed object is {@link Configuration }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Configuration }
+     *     
      */
-    public void setConfiguration(final Configuration value) {
+    public void setConfiguration(Configuration value) {
         this.configuration = value;
     }
+
 }

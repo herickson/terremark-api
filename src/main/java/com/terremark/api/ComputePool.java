@@ -1,35 +1,20 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for ComputePool complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for ComputePool complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="ComputePool">
  *   &lt;complexContent>
@@ -44,11 +29,20 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ComputePool", propOrder = {"virtualMachines", "purchased", "cpuBurst", "memoryBurst"})
+@XmlType(name = "ComputePool", propOrder = {
+    "virtualMachines",
+    "purchased",
+    "cpuBurst",
+    "memoryBurst"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "ComputePool")
-public final class ComputePool extends Entity {
+public class ComputePool
+    extends Entity
+{
 
     @XmlElement(name = "Purchased", nillable = true)
     protected ComputePoolCapacity purchased;
@@ -62,8 +56,11 @@ public final class ComputePool extends Entity {
 
     /**
      * Gets the value of the purchased property.
-     *
-     * @return possible object is {@link ComputePoolCapacity }
+     * 
+     * @return
+     *     possible object is
+     *     {@link ComputePoolCapacity }
+     *     
      */
     public ComputePoolCapacity getPurchased() {
         return purchased;
@@ -71,17 +68,23 @@ public final class ComputePool extends Entity {
 
     /**
      * Sets the value of the purchased property.
-     *
-     * @param value allowed object is {@link ComputePoolCapacity }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ComputePoolCapacity }
+     *     
      */
-    public void setPurchased(final ComputePoolCapacity value) {
+    public void setPurchased(ComputePoolCapacity value) {
         this.purchased = value;
     }
 
     /**
      * Gets the value of the cpuBurst property.
-     *
-     * @return possible object is {@link ResourceBurst }
+     * 
+     * @return
+     *     possible object is
+     *     {@link ResourceBurst }
+     *     
      */
     public ResourceBurst getCpuBurst() {
         return cpuBurst;
@@ -89,17 +92,23 @@ public final class ComputePool extends Entity {
 
     /**
      * Sets the value of the cpuBurst property.
-     *
-     * @param value allowed object is {@link ResourceBurst }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ResourceBurst }
+     *     
      */
-    public void setCpuBurst(final ResourceBurst value) {
+    public void setCpuBurst(ResourceBurst value) {
         this.cpuBurst = value;
     }
 
     /**
      * Gets the value of the memoryBurst property.
-     *
-     * @return possible object is {@link ResourceBurst }
+     * 
+     * @return
+     *     possible object is
+     *     {@link ResourceBurst }
+     *     
      */
     public ResourceBurst getMemoryBurst() {
         return memoryBurst;
@@ -107,10 +116,13 @@ public final class ComputePool extends Entity {
 
     /**
      * Sets the value of the memoryBurst property.
-     *
-     * @param value allowed object is {@link ResourceBurst }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ResourceBurst }
+     *     
      */
-    public void setMemoryBurst(final ResourceBurst value) {
+    public void setMemoryBurst(ResourceBurst value) {
         this.memoryBurst = value;
     }
 
@@ -120,4 +132,5 @@ public final class ComputePool extends Entity {
         }
         return virtualMachines;
     }
+
 }

@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -20,12 +6,12 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for CustomizationOption complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for CustomizationOption complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="CustomizationOption">
  *   &lt;complexContent>
@@ -40,10 +26,19 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CustomizationOption", propOrder = {"type", "canPowerOn", "passwordRequired", "sshKeyRequired"})
-public class CustomizationOption extends ToStringGenerator {
+@XmlType(name = "CustomizationOption", propOrder = {
+    "type",
+    "canPowerOn",
+    "passwordRequired",
+    "sshKeyRequired"
+})
+public class CustomizationOption
+    extends ToStringGenerator
+{
 
     @XmlElement(name = "Type", required = true)
     protected CustomizationTypeEnum type;
@@ -56,8 +51,11 @@ public class CustomizationOption extends ToStringGenerator {
 
     /**
      * Gets the value of the type property.
-     *
-     * @return possible object is {@link CustomizationTypeEnum }
+     * 
+     * @return
+     *     possible object is
+     *     {@link CustomizationTypeEnum }
+     *     
      */
     public CustomizationTypeEnum getType() {
         return type;
@@ -65,15 +63,19 @@ public class CustomizationOption extends ToStringGenerator {
 
     /**
      * Sets the value of the type property.
-     *
-     * @param value allowed object is {@link CustomizationTypeEnum }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link CustomizationTypeEnum }
+     *     
      */
-    public void setType(final CustomizationTypeEnum value) {
+    public void setType(CustomizationTypeEnum value) {
         this.type = value;
     }
 
     /**
      * Gets the value of the canPowerOn property.
+     * 
      */
     public boolean isCanPowerOn() {
         return canPowerOn;
@@ -81,13 +83,15 @@ public class CustomizationOption extends ToStringGenerator {
 
     /**
      * Sets the value of the canPowerOn property.
+     * 
      */
-    public void setCanPowerOn(final boolean value) {
+    public void setCanPowerOn(boolean value) {
         this.canPowerOn = value;
     }
 
     /**
      * Gets the value of the passwordRequired property.
+     * 
      */
     public boolean isPasswordRequired() {
         return passwordRequired;
@@ -95,13 +99,15 @@ public class CustomizationOption extends ToStringGenerator {
 
     /**
      * Sets the value of the passwordRequired property.
+     * 
      */
-    public void setPasswordRequired(final boolean value) {
+    public void setPasswordRequired(boolean value) {
         this.passwordRequired = value;
     }
 
     /**
      * Gets the value of the sshKeyRequired property.
+     * 
      */
     public boolean isSshKeyRequired() {
         return sshKeyRequired;
@@ -109,8 +115,10 @@ public class CustomizationOption extends ToStringGenerator {
 
     /**
      * Sets the value of the sshKeyRequired property.
+     * 
      */
-    public void setSshKeyRequired(final boolean value) {
+    public void setSshKeyRequired(boolean value) {
         this.sshKeyRequired = value;
     }
+
 }

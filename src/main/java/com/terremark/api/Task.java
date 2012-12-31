@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -22,12 +8,12 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+
 /**
- * <p>
- * Java class for Task complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for Task complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="Task">
  *   &lt;complexContent>
@@ -46,12 +32,24 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Task", propOrder = {"operation", "status", "impactedItem", "startTime", "completedTime", "notes",
-                "errorMessage", "initiatedBy"})
+@XmlType(name = "Task", propOrder = {
+    "operation",
+    "status",
+    "impactedItem",
+    "startTime",
+    "completedTime",
+    "notes",
+    "errorMessage",
+    "initiatedBy"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "Task")
-public final class Task extends Resource {
+public class Task
+    extends Resource
+{
 
     @XmlElement(name = "Operation", nillable = true)
     protected String operation;
@@ -74,8 +72,11 @@ public final class Task extends Resource {
 
     /**
      * Gets the value of the operation property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getOperation() {
         return operation;
@@ -83,17 +84,23 @@ public final class Task extends Resource {
 
     /**
      * Sets the value of the operation property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setOperation(final String value) {
+    public void setOperation(String value) {
         this.operation = value;
     }
 
     /**
      * Gets the value of the status property.
-     *
-     * @return possible object is {@link TaskStatus }
+     * 
+     * @return
+     *     possible object is
+     *     {@link TaskStatus }
+     *     
      */
     public TaskStatus getStatus() {
         return status;
@@ -101,17 +108,23 @@ public final class Task extends Resource {
 
     /**
      * Sets the value of the status property.
-     *
-     * @param value allowed object is {@link TaskStatus }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TaskStatus }
+     *     
      */
-    public void setStatus(final TaskStatus value) {
+    public void setStatus(TaskStatus value) {
         this.status = value;
     }
 
     /**
      * Gets the value of the impactedItem property.
-     *
-     * @return possible object is {@link Reference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Reference }
+     *     
      */
     public Reference getImpactedItem() {
         return impactedItem;
@@ -119,17 +132,23 @@ public final class Task extends Resource {
 
     /**
      * Sets the value of the impactedItem property.
-     *
-     * @param value allowed object is {@link Reference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Reference }
+     *     
      */
-    public void setImpactedItem(final Reference value) {
+    public void setImpactedItem(Reference value) {
         this.impactedItem = value;
     }
 
     /**
      * Gets the value of the startTime property.
-     *
-     * @return possible object is {@link XMLGregorianCalendar }
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getStartTime() {
         return startTime;
@@ -137,17 +156,23 @@ public final class Task extends Resource {
 
     /**
      * Sets the value of the startTime property.
-     *
-     * @param value allowed object is {@link XMLGregorianCalendar }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setStartTime(final XMLGregorianCalendar value) {
+    public void setStartTime(XMLGregorianCalendar value) {
         this.startTime = value;
     }
 
     /**
      * Gets the value of the completedTime property.
-     *
-     * @return possible object is {@link XMLGregorianCalendar }
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getCompletedTime() {
         return completedTime;
@@ -155,17 +180,23 @@ public final class Task extends Resource {
 
     /**
      * Sets the value of the completedTime property.
-     *
-     * @param value allowed object is {@link XMLGregorianCalendar }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setCompletedTime(final XMLGregorianCalendar value) {
+    public void setCompletedTime(XMLGregorianCalendar value) {
         this.completedTime = value;
     }
 
     /**
      * Gets the value of the notes property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getNotes() {
         return notes;
@@ -173,17 +204,23 @@ public final class Task extends Resource {
 
     /**
      * Sets the value of the notes property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setNotes(final String value) {
+    public void setNotes(String value) {
         this.notes = value;
     }
 
     /**
      * Gets the value of the errorMessage property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getErrorMessage() {
         return errorMessage;
@@ -191,17 +228,23 @@ public final class Task extends Resource {
 
     /**
      * Sets the value of the errorMessage property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setErrorMessage(final String value) {
+    public void setErrorMessage(String value) {
         this.errorMessage = value;
     }
 
     /**
      * Gets the value of the initiatedBy property.
-     *
-     * @return possible object is {@link Reference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Reference }
+     *     
      */
     public Reference getInitiatedBy() {
         return initiatedBy;
@@ -209,10 +252,14 @@ public final class Task extends Resource {
 
     /**
      * Sets the value of the initiatedBy property.
-     *
-     * @param value allowed object is {@link Reference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Reference }
+     *     
      */
-    public void setInitiatedBy(final Reference value) {
+    public void setInitiatedBy(Reference value) {
         this.initiatedBy = value;
     }
+
 }

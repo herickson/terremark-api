@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -20,12 +6,12 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for LoginBanner complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for LoginBanner complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="LoginBanner">
  *   &lt;complexContent>
@@ -38,11 +24,18 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LoginBanner", propOrder = {"display", "text"})
+@XmlType(name = "LoginBanner", propOrder = {
+    "display",
+    "text"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "LoginBanner")
-public final class LoginBanner extends Resource {
+public class LoginBanner
+    extends Resource
+{
 
     @XmlElement(name = "Display")
     protected boolean display;
@@ -51,6 +44,7 @@ public final class LoginBanner extends Resource {
 
     /**
      * Gets the value of the display property.
+     * 
      */
     public boolean isDisplay() {
         return display;
@@ -58,15 +52,19 @@ public final class LoginBanner extends Resource {
 
     /**
      * Sets the value of the display property.
+     * 
      */
-    public void setDisplay(final boolean value) {
+    public void setDisplay(boolean value) {
         this.display = value;
     }
 
     /**
      * Gets the value of the text property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getText() {
         return text;
@@ -74,10 +72,14 @@ public final class LoginBanner extends Resource {
 
     /**
      * Sets the value of the text property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setText(final String value) {
+    public void setText(String value) {
         this.text = value;
     }
+
 }

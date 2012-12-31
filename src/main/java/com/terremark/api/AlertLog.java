@@ -1,34 +1,19 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for AlertLog complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for AlertLog complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="AlertLog">
  *   &lt;complexContent>
@@ -43,11 +28,20 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AlertLog", propOrder = {"totalCount", "pageCount", "currentPage", "alerts"})
+@XmlType(name = "AlertLog", propOrder = {
+    "totalCount",
+    "pageCount",
+    "currentPage",
+    "alerts"
+})
 @javax.xml.bind.annotation.XmlRootElement(name = "AlertLog")
-public final class AlertLog extends ToStringGenerator {
+public class AlertLog
+    extends ToStringGenerator
+{
 
     @XmlElement(name = "TotalCount")
     protected Integer totalCount;
@@ -60,8 +54,11 @@ public final class AlertLog extends ToStringGenerator {
 
     /**
      * Gets the value of the totalCount property.
-     *
-     * @return possible object is {@link Integer }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
     public Integer getTotalCount() {
         return totalCount;
@@ -69,17 +66,23 @@ public final class AlertLog extends ToStringGenerator {
 
     /**
      * Sets the value of the totalCount property.
-     *
-     * @param value allowed object is {@link Integer }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setTotalCount(final Integer value) {
+    public void setTotalCount(Integer value) {
         this.totalCount = value;
     }
 
     /**
      * Gets the value of the pageCount property.
-     *
-     * @return possible object is {@link Integer }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
     public Integer getPageCount() {
         return pageCount;
@@ -87,17 +90,23 @@ public final class AlertLog extends ToStringGenerator {
 
     /**
      * Sets the value of the pageCount property.
-     *
-     * @param value allowed object is {@link Integer }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setPageCount(final Integer value) {
+    public void setPageCount(Integer value) {
         this.pageCount = value;
     }
 
     /**
      * Gets the value of the currentPage property.
-     *
-     * @return possible object is {@link Integer }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
     public Integer getCurrentPage() {
         return currentPage;
@@ -105,27 +114,37 @@ public final class AlertLog extends ToStringGenerator {
 
     /**
      * Sets the value of the currentPage property.
-     *
-     * @param value allowed object is {@link Integer }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setCurrentPage(final Integer value) {
+    public void setCurrentPage(Integer value) {
         this.currentPage = value;
     }
 
     /**
      * Gets the value of the alerts property.
+     * 
      * <p>
-     * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to
-     * the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for
-     * the alerts property.
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the alerts property.
+     * 
      * <p>
      * For example, to add a new item, do as follows:
-     *
      * <pre>
-     * getAlerts().add(newItem);
+     *    getAlerts().add(newItem);
      * </pre>
+     * 
+     * 
      * <p>
-     * Objects of the following type(s) are allowed in the list {@link Alert }
+     * Objects of the following type(s) are allowed in the list
+     * {@link Alert }
+     * 
+     * 
      */
     public List<Alert> getAlerts() {
         if (alerts == null) {
@@ -133,4 +152,5 @@ public final class AlertLog extends ToStringGenerator {
         }
         return this.alerts;
     }
+
 }

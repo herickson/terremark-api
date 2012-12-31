@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -20,12 +6,12 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for VirtualMachineResourceSummary complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for VirtualMachineResourceSummary complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="VirtualMachineResourceSummary">
  *   &lt;complexContent>
@@ -38,10 +24,17 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VirtualMachineResourceSummary", propOrder = {"count", "poweredOnCount"})
-public class VirtualMachineResourceSummary extends ToStringGenerator {
+@XmlType(name = "VirtualMachineResourceSummary", propOrder = {
+    "count",
+    "poweredOnCount"
+})
+public class VirtualMachineResourceSummary
+    extends ToStringGenerator
+{
 
     @XmlElement(name = "Count", nillable = true)
     protected Integer count;
@@ -50,8 +43,11 @@ public class VirtualMachineResourceSummary extends ToStringGenerator {
 
     /**
      * Gets the value of the count property.
-     *
-     * @return possible object is {@link Integer }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
     public Integer getCount() {
         return count;
@@ -59,17 +55,23 @@ public class VirtualMachineResourceSummary extends ToStringGenerator {
 
     /**
      * Sets the value of the count property.
-     *
-     * @param value allowed object is {@link Integer }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setCount(final Integer value) {
+    public void setCount(Integer value) {
         this.count = value;
     }
 
     /**
      * Gets the value of the poweredOnCount property.
-     *
-     * @return possible object is {@link Integer }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
     public Integer getPoweredOnCount() {
         return poweredOnCount;
@@ -77,10 +79,14 @@ public class VirtualMachineResourceSummary extends ToStringGenerator {
 
     /**
      * Sets the value of the poweredOnCount property.
-     *
-     * @param value allowed object is {@link Integer }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setPoweredOnCount(final Integer value) {
+    public void setPoweredOnCount(Integer value) {
         this.poweredOnCount = value;
     }
+
 }

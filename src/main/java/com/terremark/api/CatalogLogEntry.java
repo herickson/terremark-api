@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -22,12 +8,12 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+
 /**
- * <p>
- * Java class for CatalogLogEntry complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for CatalogLogEntry complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="CatalogLogEntry">
  *   &lt;complexContent>
@@ -44,10 +30,21 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CatalogLogEntry", propOrder = {"date", "user", "location", "catalogEntryName", "event", "file"})
-public class CatalogLogEntry extends ToStringGenerator {
+@XmlType(name = "CatalogLogEntry", propOrder = {
+    "date",
+    "user",
+    "location",
+    "catalogEntryName",
+    "event",
+    "file"
+})
+public class CatalogLogEntry
+    extends ToStringGenerator
+{
 
     @XmlElement(name = "Date")
     @XmlSchemaType(name = "dateTime")
@@ -65,8 +62,11 @@ public class CatalogLogEntry extends ToStringGenerator {
 
     /**
      * Gets the value of the date property.
-     *
-     * @return possible object is {@link XMLGregorianCalendar }
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getDate() {
         return date;
@@ -74,17 +74,23 @@ public class CatalogLogEntry extends ToStringGenerator {
 
     /**
      * Sets the value of the date property.
-     *
-     * @param value allowed object is {@link XMLGregorianCalendar }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setDate(final XMLGregorianCalendar value) {
+    public void setDate(XMLGregorianCalendar value) {
         this.date = value;
     }
 
     /**
      * Gets the value of the user property.
-     *
-     * @return possible object is {@link UserReference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link UserReference }
+     *     
      */
     public UserReference getUser() {
         return user;
@@ -92,17 +98,23 @@ public class CatalogLogEntry extends ToStringGenerator {
 
     /**
      * Sets the value of the user property.
-     *
-     * @param value allowed object is {@link UserReference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link UserReference }
+     *     
      */
-    public void setUser(final UserReference value) {
+    public void setUser(UserReference value) {
         this.user = value;
     }
 
     /**
      * Gets the value of the location property.
-     *
-     * @return possible object is {@link Reference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Reference }
+     *     
      */
     public Reference getLocation() {
         return location;
@@ -110,17 +122,23 @@ public class CatalogLogEntry extends ToStringGenerator {
 
     /**
      * Sets the value of the location property.
-     *
-     * @param value allowed object is {@link Reference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Reference }
+     *     
      */
-    public void setLocation(final Reference value) {
+    public void setLocation(Reference value) {
         this.location = value;
     }
 
     /**
      * Gets the value of the catalogEntryName property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCatalogEntryName() {
         return catalogEntryName;
@@ -128,17 +146,23 @@ public class CatalogLogEntry extends ToStringGenerator {
 
     /**
      * Sets the value of the catalogEntryName property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCatalogEntryName(final String value) {
+    public void setCatalogEntryName(String value) {
         this.catalogEntryName = value;
     }
 
     /**
      * Gets the value of the event property.
-     *
-     * @return possible object is {@link CatalogLogEvent }
+     * 
+     * @return
+     *     possible object is
+     *     {@link CatalogLogEvent }
+     *     
      */
     public CatalogLogEvent getEvent() {
         return event;
@@ -146,17 +170,23 @@ public class CatalogLogEntry extends ToStringGenerator {
 
     /**
      * Sets the value of the event property.
-     *
-     * @param value allowed object is {@link CatalogLogEvent }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link CatalogLogEvent }
+     *     
      */
-    public void setEvent(final CatalogLogEvent value) {
+    public void setEvent(CatalogLogEvent value) {
         this.event = value;
     }
 
     /**
      * Gets the value of the file property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getFile() {
         return file;
@@ -164,10 +194,14 @@ public class CatalogLogEntry extends ToStringGenerator {
 
     /**
      * Sets the value of the file property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFile(final String value) {
+    public void setFile(String value) {
         this.file = value;
     }
+
 }

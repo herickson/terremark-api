@@ -1,33 +1,18 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import java.math.BigDecimal;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for ComputeMatrixEntry complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for ComputeMatrixEntry complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="ComputeMatrixEntry">
  *   &lt;complexContent>
@@ -41,10 +26,18 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ComputeMatrixEntry", propOrder = {"processorCount", "memory", "hourlyCost"})
-public class ComputeMatrixEntry extends ToStringGenerator {
+@XmlType(name = "ComputeMatrixEntry", propOrder = {
+    "processorCount",
+    "memory",
+    "hourlyCost"
+})
+public class ComputeMatrixEntry
+    extends ToStringGenerator
+{
 
     @XmlElement(name = "ProcessorCount")
     protected Integer processorCount;
@@ -55,8 +48,11 @@ public class ComputeMatrixEntry extends ToStringGenerator {
 
     /**
      * Gets the value of the processorCount property.
-     *
-     * @return possible object is {@link Integer }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
     public Integer getProcessorCount() {
         return processorCount;
@@ -64,17 +60,23 @@ public class ComputeMatrixEntry extends ToStringGenerator {
 
     /**
      * Sets the value of the processorCount property.
-     *
-     * @param value allowed object is {@link Integer }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setProcessorCount(final Integer value) {
+    public void setProcessorCount(Integer value) {
         this.processorCount = value;
     }
 
     /**
      * Gets the value of the memory property.
-     *
-     * @return possible object is {@link Integer }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
     public Integer getMemory() {
         return memory;
@@ -82,17 +84,23 @@ public class ComputeMatrixEntry extends ToStringGenerator {
 
     /**
      * Sets the value of the memory property.
-     *
-     * @param value allowed object is {@link Integer }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setMemory(final Integer value) {
+    public void setMemory(Integer value) {
         this.memory = value;
     }
 
     /**
      * Gets the value of the hourlyCost property.
-     *
-     * @return possible object is {@link BigDecimal }
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigDecimal }
+     *     
      */
     public BigDecimal getHourlyCost() {
         return hourlyCost;
@@ -100,10 +108,14 @@ public class ComputeMatrixEntry extends ToStringGenerator {
 
     /**
      * Sets the value of the hourlyCost property.
-     *
-     * @param value allowed object is {@link BigDecimal }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigDecimal }
+     *     
      */
-    public void setHourlyCost(final BigDecimal value) {
+    public void setHourlyCost(BigDecimal value) {
         this.hourlyCost = value;
     }
+
 }

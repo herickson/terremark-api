@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -21,12 +7,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for ComputeResourceSummary complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for ComputeResourceSummary complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="ComputeResourceSummary">
  *   &lt;complexContent>
@@ -41,11 +27,23 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ComputeResourceSummary", propOrder = {"allocated", "consumed", "purchased", "utilization"})
-@XmlSeeAlso({CpuComputeResourceSummary.class, MemoryComputeResourceSummary.class})
-public class ComputeResourceSummary extends ToStringGenerator {
+@XmlType(name = "ComputeResourceSummary", propOrder = {
+    "allocated",
+    "consumed",
+    "purchased",
+    "utilization"
+})
+@XmlSeeAlso({
+    CpuComputeResourceSummary.class,
+    MemoryComputeResourceSummary.class
+})
+public class ComputeResourceSummary
+    extends ToStringGenerator
+{
 
     @XmlElement(name = "Allocated", nillable = true)
     protected ResourceCapacity allocated;
@@ -58,8 +56,11 @@ public class ComputeResourceSummary extends ToStringGenerator {
 
     /**
      * Gets the value of the allocated property.
-     *
-     * @return possible object is {@link ResourceCapacity }
+     * 
+     * @return
+     *     possible object is
+     *     {@link ResourceCapacity }
+     *     
      */
     public ResourceCapacity getAllocated() {
         return allocated;
@@ -67,17 +68,23 @@ public class ComputeResourceSummary extends ToStringGenerator {
 
     /**
      * Sets the value of the allocated property.
-     *
-     * @param value allowed object is {@link ResourceCapacity }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ResourceCapacity }
+     *     
      */
-    public void setAllocated(final ResourceCapacity value) {
+    public void setAllocated(ResourceCapacity value) {
         this.allocated = value;
     }
 
     /**
      * Gets the value of the consumed property.
-     *
-     * @return possible object is {@link ResourceCapacity }
+     * 
+     * @return
+     *     possible object is
+     *     {@link ResourceCapacity }
+     *     
      */
     public ResourceCapacity getConsumed() {
         return consumed;
@@ -85,17 +92,23 @@ public class ComputeResourceSummary extends ToStringGenerator {
 
     /**
      * Sets the value of the consumed property.
-     *
-     * @param value allowed object is {@link ResourceCapacity }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ResourceCapacity }
+     *     
      */
-    public void setConsumed(final ResourceCapacity value) {
+    public void setConsumed(ResourceCapacity value) {
         this.consumed = value;
     }
 
     /**
      * Gets the value of the purchased property.
-     *
-     * @return possible object is {@link ResourceCapacity }
+     * 
+     * @return
+     *     possible object is
+     *     {@link ResourceCapacity }
+     *     
      */
     public ResourceCapacity getPurchased() {
         return purchased;
@@ -103,17 +116,23 @@ public class ComputeResourceSummary extends ToStringGenerator {
 
     /**
      * Sets the value of the purchased property.
-     *
-     * @param value allowed object is {@link ResourceCapacity }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ResourceCapacity }
+     *     
      */
-    public void setPurchased(final ResourceCapacity value) {
+    public void setPurchased(ResourceCapacity value) {
         this.purchased = value;
     }
 
     /**
      * Gets the value of the utilization property.
-     *
-     * @return possible object is {@link Integer }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
     public Integer getUtilization() {
         return utilization;
@@ -121,10 +140,14 @@ public class ComputeResourceSummary extends ToStringGenerator {
 
     /**
      * Sets the value of the utilization property.
-     *
-     * @param value allowed object is {@link Integer }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setUtilization(final Integer value) {
+    public void setUtilization(Integer value) {
         this.utilization = value;
     }
+
 }

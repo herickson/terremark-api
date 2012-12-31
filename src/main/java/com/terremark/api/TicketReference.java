@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -22,12 +8,12 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+
 /**
- * <p>
- * Java class for TicketReference complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for TicketReference complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="TicketReference">
  *   &lt;complexContent>
@@ -44,10 +30,21 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TicketReference", propOrder = {"id", "date", "severity", "status", "device", "description"})
-public class TicketReference extends Reference {
+@XmlType(name = "TicketReference", propOrder = {
+    "id",
+    "date",
+    "severity",
+    "status",
+    "device",
+    "description"
+})
+public class TicketReference
+    extends Reference
+{
 
     @XmlElement(name = "Id")
     protected Integer id;
@@ -65,8 +62,11 @@ public class TicketReference extends Reference {
 
     /**
      * Gets the value of the id property.
-     *
-     * @return possible object is {@link Integer }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
     public Integer getId() {
         return id;
@@ -74,17 +74,23 @@ public class TicketReference extends Reference {
 
     /**
      * Sets the value of the id property.
-     *
-     * @param value allowed object is {@link Integer }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setId(final Integer value) {
+    public void setId(Integer value) {
         this.id = value;
     }
 
     /**
      * Gets the value of the date property.
-     *
-     * @return possible object is {@link XMLGregorianCalendar }
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getDate() {
         return date;
@@ -92,17 +98,23 @@ public class TicketReference extends Reference {
 
     /**
      * Sets the value of the date property.
-     *
-     * @param value allowed object is {@link XMLGregorianCalendar }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setDate(final XMLGregorianCalendar value) {
+    public void setDate(XMLGregorianCalendar value) {
         this.date = value;
     }
 
     /**
      * Gets the value of the severity property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getSeverity() {
         return severity;
@@ -110,17 +122,23 @@ public class TicketReference extends Reference {
 
     /**
      * Sets the value of the severity property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSeverity(final String value) {
+    public void setSeverity(String value) {
         this.severity = value;
     }
 
     /**
      * Gets the value of the status property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getStatus() {
         return status;
@@ -128,17 +146,23 @@ public class TicketReference extends Reference {
 
     /**
      * Sets the value of the status property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setStatus(final String value) {
+    public void setStatus(String value) {
         this.status = value;
     }
 
     /**
      * Gets the value of the device property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getDevice() {
         return device;
@@ -146,17 +170,23 @@ public class TicketReference extends Reference {
 
     /**
      * Sets the value of the device property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDevice(final String value) {
+    public void setDevice(String value) {
         this.device = value;
     }
 
     /**
      * Gets the value of the description property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getDescription() {
         return description;
@@ -164,10 +194,14 @@ public class TicketReference extends Reference {
 
     /**
      * Sets the value of the description property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(final String value) {
+    public void setDescription(String value) {
         this.description = value;
     }
+
 }

@@ -1,18 +1,4 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -21,12 +7,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for CreateOsTemplateVirtualMachineRequest complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for CreateOsTemplateVirtualMachineRequest complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="CreateOsTemplateVirtualMachineRequest">
  *   &lt;complexContent>
@@ -40,12 +26,21 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CreateOsTemplateVirtualMachineRequest", propOrder = {"linuxCustomization", "windowsCustomization",
-                "poweredOn"})
-@XmlSeeAlso({CreateVirtualMachine.class})
-public class CreateOsTemplateVirtualMachineRequest extends CreateVirtualMachineRequest {
+@XmlType(name = "CreateOsTemplateVirtualMachineRequest", propOrder = {
+    "linuxCustomization",
+    "windowsCustomization",
+    "poweredOn"
+})
+@XmlSeeAlso({
+    CreateVirtualMachine.class
+})
+public class CreateOsTemplateVirtualMachineRequest
+    extends CreateVirtualMachineRequest
+{
 
     @XmlElement(name = "LinuxCustomization", nillable = true)
     protected LinuxCustomization linuxCustomization;
@@ -56,8 +51,11 @@ public class CreateOsTemplateVirtualMachineRequest extends CreateVirtualMachineR
 
     /**
      * Gets the value of the linuxCustomization property.
-     *
-     * @return possible object is {@link LinuxCustomization }
+     * 
+     * @return
+     *     possible object is
+     *     {@link LinuxCustomization }
+     *     
      */
     public LinuxCustomization getLinuxCustomization() {
         return linuxCustomization;
@@ -65,17 +63,23 @@ public class CreateOsTemplateVirtualMachineRequest extends CreateVirtualMachineR
 
     /**
      * Sets the value of the linuxCustomization property.
-     *
-     * @param value allowed object is {@link LinuxCustomization }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link LinuxCustomization }
+     *     
      */
-    public void setLinuxCustomization(final LinuxCustomization value) {
+    public void setLinuxCustomization(LinuxCustomization value) {
         this.linuxCustomization = value;
     }
 
     /**
      * Gets the value of the windowsCustomization property.
-     *
-     * @return possible object is {@link WindowsCustomization }
+     * 
+     * @return
+     *     possible object is
+     *     {@link WindowsCustomization }
+     *     
      */
     public WindowsCustomization getWindowsCustomization() {
         return windowsCustomization;
@@ -83,17 +87,23 @@ public class CreateOsTemplateVirtualMachineRequest extends CreateVirtualMachineR
 
     /**
      * Sets the value of the windowsCustomization property.
-     *
-     * @param value allowed object is {@link WindowsCustomization }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link WindowsCustomization }
+     *     
      */
-    public void setWindowsCustomization(final WindowsCustomization value) {
+    public void setWindowsCustomization(WindowsCustomization value) {
         this.windowsCustomization = value;
     }
 
     /**
      * Gets the value of the poweredOn property.
-     *
-     * @return possible object is {@link Boolean }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
     public Boolean isPoweredOn() {
         return poweredOn;
@@ -101,10 +111,14 @@ public class CreateOsTemplateVirtualMachineRequest extends CreateVirtualMachineR
 
     /**
      * Sets the value of the poweredOn property.
-     *
-     * @param value allowed object is {@link Boolean }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setPoweredOn(final Boolean value) {
+    public void setPoweredOn(Boolean value) {
         this.poweredOn = value;
     }
+
 }

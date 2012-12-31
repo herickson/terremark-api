@@ -1,23 +1,8 @@
-/**
- * Copyright 2012 Terremark Worldwide Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.terremark.api;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -25,12 +10,12 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java class for Device complex type.
- * <p>
- * The following schema fragment specifies the expected content contained within this class.
- *
+ * <p>Java class for Device complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="Device">
  *   &lt;complexContent>
@@ -40,16 +25,30 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="Tags" type="{}Tags" minOccurs="0"/>
  *         &lt;element name="Layout" type="{}LayoutReference" minOccurs="0"/>
  *         &lt;element name="NetworkHost" type="{}Reference" minOccurs="0"/>
+ *         &lt;element name="AssignedSecurityGroups" type="{}AssignedSecurityGroups" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/extension>
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Device", propOrder = {"description", "tags", "layout", "networkHost"})
-@XmlSeeAlso({VirtualMachine.class, PhysicalDevice.class})
-public class Device extends Entity {
+@XmlType(name = "Device", propOrder = {
+    "description",
+    "tags",
+    "layout",
+    "networkHost",
+    "assignedSecurityGroups"
+})
+@XmlSeeAlso({
+    PhysicalDevice.class,
+    VirtualMachine.class
+})
+public class Device
+    extends Entity
+{
 
     @XmlElement(name = "Description", nillable = true)
     protected String description;
@@ -57,14 +56,19 @@ public class Device extends Entity {
     protected LayoutReference layout;
     @XmlElement(name = "NetworkHost", nillable = true)
     protected Reference networkHost;
+    @XmlElement(name = "AssignedSecurityGroups", nillable = true)
+    protected AssignedSecurityGroups assignedSecurityGroups;
     @XmlElementWrapper(name = "Tags")
     @XmlElement(name = "Tag")
     protected List<String> tags;
 
     /**
      * Gets the value of the description property.
-     *
-     * @return possible object is {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getDescription() {
         return description;
@@ -72,17 +76,23 @@ public class Device extends Entity {
 
     /**
      * Sets the value of the description property.
-     *
-     * @param value allowed object is {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(final String value) {
+    public void setDescription(String value) {
         this.description = value;
     }
 
     /**
      * Gets the value of the layout property.
-     *
-     * @return possible object is {@link LayoutReference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link LayoutReference }
+     *     
      */
     public LayoutReference getLayout() {
         return layout;
@@ -90,17 +100,23 @@ public class Device extends Entity {
 
     /**
      * Sets the value of the layout property.
-     *
-     * @param value allowed object is {@link LayoutReference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link LayoutReference }
+     *     
      */
-    public void setLayout(final LayoutReference value) {
+    public void setLayout(LayoutReference value) {
         this.layout = value;
     }
 
     /**
      * Gets the value of the networkHost property.
-     *
-     * @return possible object is {@link Reference }
+     * 
+     * @return
+     *     possible object is
+     *     {@link Reference }
+     *     
      */
     public Reference getNetworkHost() {
         return networkHost;
@@ -108,11 +124,38 @@ public class Device extends Entity {
 
     /**
      * Sets the value of the networkHost property.
-     *
-     * @param value allowed object is {@link Reference }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Reference }
+     *     
      */
-    public void setNetworkHost(final Reference value) {
+    public void setNetworkHost(Reference value) {
         this.networkHost = value;
+    }
+
+    /**
+     * Gets the value of the assignedSecurityGroups property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link AssignedSecurityGroups }
+     *     
+     */
+    public AssignedSecurityGroups getAssignedSecurityGroups() {
+        return assignedSecurityGroups;
+    }
+
+    /**
+     * Sets the value of the assignedSecurityGroups property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AssignedSecurityGroups }
+     *     
+     */
+    public void setAssignedSecurityGroups(AssignedSecurityGroups value) {
+        this.assignedSecurityGroups = value;
     }
 
     public List<String> getTags() {
@@ -121,4 +164,5 @@ public class Device extends Entity {
         }
         return tags;
     }
+
 }
